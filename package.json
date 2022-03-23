@@ -1,0 +1,28 @@
+{
+  "name": "laguilde",
+  "version": "1.0.0",
+  "description": "Site web de la Guilde des nettoyeurs. Un site qui a pour vocation de donner à des usagers la possibilité de géolocaliser des décharges sauvages afin de les nettoyers.",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David83400/laGuilde.git"
+  },
+  "author": "David Roche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David83400/laGuilde/issues"
+  },
+  "homepage": "https://github.com/David83400/laGuilde#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
