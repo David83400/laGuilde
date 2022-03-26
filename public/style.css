@@ -1,0 +1,95 @@
+/* Main colors and fonts */
+.greenlightCol {
+    color: #81bd42;
+}
+
+.greenlightBac {
+    background-color: #81bd42;
+}
+
+.greenDarkCol {
+    color: #48701c;
+}
+
+.greenDarkBac {
+    background-color: #48701c;
+}
+
+.clearBrownCol {
+    color: #bd4f2f !important;
+}
+
+.darkBrownCol {
+    color: #703322 !important;
+}
+
+.bladeBrownBac {
+    background-color: #f1e6d9;
+}
+
+.whiteCol {
+    color: #ffffff;
+}
+
+.whitebac {
+    background-color: #ffffff;
+}
+
+.black {
+    color: #272727;
+}
+
+.merriFont {
+    font-family:'Merriweather', Arial, Verdana, Sans-serif !important;
+}
+
+.dancingFont {
+    font-family:'Dancing Script', Arial, Verdana, Sans-serif !important;
+}
+
+/* Main styles */
+h2 {
+    font-size: 50px !important;
+    font-weight: bold !important;
+}
+
+a {
+    text-decoration: none !important;
+    font-size: 0.9em !important;
+}
+
+.button {
+    width: 120px;
+    height: auto;
+    padding: 8px;
+    font-size: 0.9em !important;
+    border: 2px solid #81bd42;
+    border-radius: 10px !important;
+    box-shadow: 1px 2px 6px #444444;
+}
+
+
+
+
+
+
+
+h1 {
+    font-size: 28px !important;
+}
+
+.logo {
+    width: auto !important;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px !important;
+}
+
+.navbar .nav-item a:focus {
+    color: #bd4f2f !important;
+    border-bottom: 3px solid #bd4f2f !important;
+}
+
+.carousel {
+    width: 800px;
+}
