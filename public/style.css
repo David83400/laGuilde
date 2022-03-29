@@ -49,13 +49,26 @@
 
 /* Main styles */
 h2 {
-    font-size: 50px !important;
+    font-size: 48px !important;
+    font-weight: bold !important;
+}
+
+h5 {
     font-weight: bold !important;
 }
 
 a {
+    color: #81bd42 !important;
     text-decoration: none !important;
     font-size: 0.9em !important;
+}
+
+a:hover {
+    color: #48701c !important;
+}
+
+p {
+    font-size: 0.9em;
 }
 
 .button {
@@ -65,7 +78,7 @@ a {
     font-size: 0.9em !important;
     border: 2px solid #81bd42;
     border-radius: 10px !important;
-    box-shadow: 1px 2px 6px #444444;
+    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.5);
 }
 
 
@@ -73,16 +86,22 @@ a {
 
 
 
-
-h1 {
-    font-size: 28px !important;
-}
-
-.logo {
-    width: auto !important;
-    height: auto;
-    padding: 10px;
-    border-radius: 5px !important;
+/* ------------------------------Main header -----------------------------------*/
+    /* Logo */
+    h1 {
+        font-size: 28px !important;
+    }
+    
+    .logo {
+        width: auto !important;
+        height: auto;
+        padding: 10px;
+        border-radius: 5px !important;
+    }
+    
+/* ----------------------------------Navbar------------------------------------- */
+.navbar .nav-item a:hover {
+    color: #bd4f2f !important;
 }
 
 .navbar .nav-item a:focus {
@@ -90,6 +109,32 @@ h1 {
     border-bottom: 3px solid #bd4f2f !important;
 }
 
-.carousel {
-    width: 800px;
+/* -----------------------------First section------------------------------------ */
+    /* Carousel */
+.carousel-shadow {
+    box-shadow: 6px 6px 14px rgba(39, 39, 39, 0.5);
+    border-radius: 20px;
+}
+
+.carousel-inner {
+    border-radius: 10px !important;
+}
+
+.carousel-indicators {
+    bottom: -75px !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 25px !important;
+    height: 25px !important;
+    margin-right: 6px !important;
+    margin-left: 6px !important;
+    border-radius: 50% !important;
+    background-color: rgba(129, 189, 66, 0.4) !important;
+    border: 3px solid #81bd42 !important;
+}
+
+.carousel-indicators .active {
+    background-color: #81bd42 !important;
+    opacity: 1 !important;
 }

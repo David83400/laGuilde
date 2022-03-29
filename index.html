@@ -50,7 +50,7 @@
     <title>La Guilde | Pour une nature sans déchets</title>
 </head>
 
-<body class="merriFont">
+<body class="black merriFont">
     <header class="shadow-sm p-3 bg-body rounded">
         <div class="container-fluid">
             <div class="row mt-1 mb-1">
@@ -96,48 +96,168 @@
             </div>
         </div>
     </nav>
-    <section>
+    <section id="firstSection">
         <div class="container">
             <div class="row">
-                <div class="firstSection col-6 offset-3 my-5">
+                <div class="col-6 offset-3 my-3">
                     <h2 class="text-center darkBrownCol dancingFont py-4">La nature n'est pas une décharge, agissons
                         ensemble !
                     </h2>
                 </div>
-                <div class="carousel">
-                    <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="public/images/home/slider/slider1.jpg" class="d-block w-100"
-                                    alt="Photo d'un lac pollué">
+                <div class="carousel col-12 my-3">
+                    <div id="carouselFade" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-shadow">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="4"
+                                    aria-label="Slide 5"></button>
                             </div>
-                            <div class="carousel-item">
-                                <img src="public/images/home/slider/slider2.jpg" class="d-block w-100"
-                                    alt="Photo d'une plage polluée par du plastique.">
+                            <div class="carousel-inner carousel-fade">
+                                <div class="carousel-item active">
+                                    <img src="public/images/home/slider/slider1.jpg" class="d-block w-100"
+                                        alt="Photo d'un lac pollué">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images/home/slider/slider2.jpg" class="d-block w-100"
+                                        alt="Photo d'une plage polluée par du plastique.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images/home/slider/slider3.jpg" class="d-block w-100"
+                                        alt="Photo de la surfase d'un lac polluée par du plastique.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images/home/slider/slider4.jpg" class="d-block w-100"
+                                        alt="Photo d'un homme ramassant des ordures dans un lac.">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images/home/slider/slider5.jpg" class="d-block w-100"
+                                        alt="Photo d'une plage polluée par du plastique.">
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="public/images/home/slider/slider3.jpg" class="d-block w-100"
-                                    alt="Photo d'un poisson et d'un homme étouffant à cause du plastique.">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="public/images/home/slider/slider4.jpg" class="d-block w-100"
-                                    alt="Photo d'une plage polluée par des bouteilles en plastique.">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="public/images/home/slider/slider5.jpg" class="d-block w-100"
-                                    alt="Photo d'une femme étouffant, un sac en plastique sur la tête.">
-                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFade"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="secondSection" class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 offset-2 mb-5">
+                    <h2 class="text-center darkBrownCol dancingFont mt-5 my-3">Chacun a un rôle à jouer à son niveau.
+                        C'est
+                        pourquoi, nous devons tous nous interroger sur ce que nous pouvons faire !
+                    </h2>
+                </div>
+            </div>
+            <div class="row row-cols-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/home/cards/card1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center py-2">Découvrez la communauté !</h5>
+                            <p class="card-text">Au delà de son objectif de protection de l’environnement, ce projet a
+                                vocation à favoriser les échanges entre usagers de la nature. Créez vos propres parcours
+                                de randonnées et
+                                collaborez avec la communauté en les partageant avec les autres membres. La volonté de
+                                tous les membres de la Guilde
+                                étant de limiter et même d’éliminer l'impact négatif des activités de l'homme sur
+                                l’environnement,
+                                associez vous ... <a href="#">Voir plus</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/home/cards/card2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center py-2">Une application simple à utiliser !</h5>
+                            <p class="card-text">L’application est d’une simplicité élémentaire. En effet, lorsqu'un
+                                randonneur trouve une décharge sauvage, et qu’il
+                                n’est pas en capacité de la nettoyer soit par manque de temps, soit par manque de
+                                matériel, l’application lui donne la
+                                possibilité de la prendre en photo et de la géolocaliser. Une fois la photo prise et le
+                                lieu indiqué sur la carte, le
+                                randonneur ou la randonneuse n'a plus qu'à entrer les informations sur la décharge ...
+                                <a href="#">Voir plus</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/home/cards/card3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center py-2">Proposez des actions !</h5>
+                            <p class="card-text">Au delà de son objectif de protection de la nature et de tous les
+                                éléments qui la composent, ce projet a également
+                                vocation à favoriser l’émergence de nouvelles idées pour limiter l’impact de l’homme sur
+                                son environnement. Grâce au
+                                réseau social que nous avons mis en place dans la section membre, vous pouvez contribuer
+                                avec la communauté ... <a href="#">Voir plus</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/home/cards/card4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center py-2">Ressourcez vous et respirez !</h5>
+                            <p class="card-text">Cette application est couplée à un site de parcours de randonnées
+                                coopératif. Celle-ci vous permettra de vous aérer sur
+                                un des différents tracés proposés par les membres de la Guilde …. laissez vous guider et
+                                aérez vous l’esprit. Une fois
+                                le parcours choisi, vous n’avez plus qu’à vous laisser guider par les indications ...
+                                <a href="#">Voir plus</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/home/cards/card5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center py-2">Créez vos parcours et partagez !</h5>
+                            <p class="card-text">Ce projet a également pour mission de favoriser le mieux vivre la
+                                nature ensemble et le partage. Cette application vous
+                                permettra de créer vos propres parcours de randonnée et de les partager avec les membres
+                                de la communauté. Partez à la
+                                découverte de lieux que vous ne connaissez pas. Faites la reconnaissance des parcours
+                                ... <a href="#">Voir plus</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="public/images/home/cards/card6.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center py-2">Partagez vos plus belles photos !</h5>
+                            <p class="card-text">Cette application a été créée pour faire prendre conscience que
+                                l’impact de l’être humain sur son environnement est
+                                mauvais, mais notre aspiration n’est pas de ne montrer que le négatif. Ainsi grâce à la
+                                communauté, nous avons également
+                                la possibilité d’élever les consciences en montrant les beautés de la nature. Avec le
+                                réseau social de la Guilde, vous
+                                avez la possibilité de partager vos photos de randonnées à la fois avec les ... <a
+                                    href="#">Voir plus</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
