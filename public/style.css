@@ -47,6 +47,10 @@
     font-family:'Dancing Script', Arial, Verdana, Sans-serif !important;
 }
 
+.boxShadow {
+    box-shadow: 6px 6px 14px rgba(39, 39, 39, 0.5);
+}
+
 /* Main styles */
 h2 {
     font-size: 48px !important;
@@ -88,17 +92,17 @@ p {
 
 /* ------------------------------Main header -----------------------------------*/
     /* Logo */
-    h1 {
-        font-size: 28px !important;
-    }
+h1 {
+    font-size: 28px !important;
+}
     
-    .logo {
-        width: auto !important;
-        height: auto;
-        padding: 10px;
-        border-radius: 5px !important;
-    }
-    
+.logo {
+    width: auto !important;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px !important;
+}
+        
 /* ----------------------------------Navbar------------------------------------- */
 .navbar .nav-item a:hover {
     color: #bd4f2f !important;
@@ -109,11 +113,10 @@ p {
     border-bottom: 3px solid #bd4f2f !important;
 }
 
-/* -----------------------------First section------------------------------------ */
+/* -----------------------------Carousel section------------------------------------ */
     /* Carousel */
 .carousel-shadow {
-    box-shadow: 6px 6px 14px rgba(39, 39, 39, 0.5);
-    border-radius: 20px;
+    border-radius: 10px !important;
 }
 
 .carousel-inner {
@@ -137,4 +140,44 @@ p {
 .carousel-indicators .active {
     background-color: #81bd42 !important;
     opacity: 1 !important;
+}
+
+/* -----------------------------Frame section------------------------------------ */
+    /* Image box */
+#frameSection .imageBox {
+    position: relative;
+}
+
+#frameSection .handsFrame {
+    z-index: 2;
+}
+
+#frameSection .childsFrame {
+    position: absolute;
+    top: 105px;
+    left: 395px;
+}
+
+#frameSection .handsFrame, #frameSection .childsFrame, #frameSection .handsFrame img, #frameSection .childsFrame img {
+    border-radius: 10px !important;
+}
+    
+#frameSection .frameText {
+    position: absolute;
+    top: 490px;
+    left: 414px;
+    width: 393px;
+    height: 128px;
+    z-index: 3;
+}
+    
+#frameSection .frameText p {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+/* -----------------------------Discovery appli section------------------------------------ */
+#discoveryApplySection {
+    margin-top: 180px;
 }
