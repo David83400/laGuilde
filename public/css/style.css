@@ -40,11 +40,11 @@
 }
 
 .merriFont {
-    font-family:'Merriweather', Arial, Verdana, Sans-serif !important;
+    font-family: 'Merriweather', Arial, Verdana, Sans-serif !important;
 }
 
 .dancingFont {
-    font-family:'Dancing Script', Arial, Verdana, Sans-serif !important;
+    font-family: 'Dancing Script', Arial, Verdana, Sans-serif !important;
 }
 
 .boxShadow {
@@ -70,7 +70,10 @@ a:hover {
     color: #48701c !important;
 }
 
-p, li, label, [placeholder] {
+p,
+li,
+label,
+[placeholder] {
     font-size: 0.9em;
 }
 
@@ -84,24 +87,19 @@ p, li, label, [placeholder] {
     box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.5);
 }
 
-
-
-
-
-
 /* ------------------------------Main header -----------------------------------*/
-    /* Logo */
+/* Logo */
 h1 {
     font-size: 28px !important;
 }
-    
+
 .logo {
     width: auto !important;
     height: auto;
     padding: 10px;
     border-radius: 5px !important;
 }
-        
+
 /* ----------------------------------Navbar------------------------------------- */
 .navbar .nav-item i {
     font-size: 1.1em;
@@ -117,7 +115,7 @@ h1 {
 }
 
 /* -----------------------------Carousel section------------------------------------ */
-    /* Carousel */
+/* Carousel */
 .carousel-shadow {
     border-radius: 10px !important;
 }
@@ -146,7 +144,7 @@ h1 {
 }
 
 /* -----------------------------Frame section------------------------------------ */
-    /* Image box */
+/* Image box */
 #frameSection .imageBox {
     position: relative;
 }
@@ -161,10 +159,13 @@ h1 {
     left: 395px;
 }
 
-#frameSection .handsFrame, #frameSection .childsFrame, #frameSection .handsFrame img, #frameSection .childsFrame img {
+#frameSection .handsFrame,
+#frameSection .childsFrame,
+#frameSection .handsFrame img,
+#frameSection .childsFrame img {
     border-radius: 10px !important;
 }
-    
+
 #frameSection .frameText {
     position: absolute;
     top: 490px;
@@ -173,7 +174,7 @@ h1 {
     height: 128px;
     z-index: 3;
 }
-    
+
 #frameSection .frameText p {
     font-size: 36px;
     font-weight: 700;
@@ -205,7 +206,7 @@ h1 {
 }
 
 /* -----------------------------footer------------------------------------ */
-footer .mentions{
+footer .notices {
     height: 130px;
 }
 
@@ -221,8 +222,3 @@ footer li .bi {
 footer li .bi:hover {
     color: #48701c;
 }
-
-
-
-
-
