@@ -62,7 +62,6 @@ h5 {
 }
 
 a {
-    color: #81bd42 !important;
     text-decoration: none !important;
     font-size: 0.9em !important;
 }
@@ -71,7 +70,7 @@ a:hover {
     color: #48701c !important;
 }
 
-p {
+p, li, label, [placeholder] {
     font-size: 0.9em;
 }
 
@@ -104,6 +103,10 @@ h1 {
 }
         
 /* ----------------------------------Navbar------------------------------------- */
+.navbar .nav-item i {
+    font-size: 1.1em;
+}
+
 .navbar .nav-item a:hover {
     color: #bd4f2f !important;
 }
@@ -181,3 +184,45 @@ h1 {
 #discoveryApplySection {
     margin-top: 180px;
 }
+
+/* -----------------------------Contact section------------------------------------ */
+#contactSection form .formBorder {
+    border: 2px solid #703322;
+}
+
+#contactSection form label {
+    font-weight: 700;
+}
+
+#contactSection form input {
+    border: 2px solid #703322;
+}
+
+#contactSection form textarea {
+    width: 100%;
+    height: 180px;
+    border: 2px solid #703322;
+}
+
+/* -----------------------------footer------------------------------------ */
+footer .mentions{
+    height: 130px;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer li .bi {
+    font-size: 2em;
+    color: #81bd42;
+}
+
+footer li .bi:hover {
+    color: #48701c;
+}
+
+
+
+
+
