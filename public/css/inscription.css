@@ -24,7 +24,7 @@
 }
 
 .bladeBrownBac {
-    background-color: #f1e6d9;
+    background-color: #f1e6d9 !important;
 }
 
 .whiteCol {
@@ -74,17 +74,17 @@ p,
 li,
 label,
 [placeholder] {
-    font-size: 0.9em;
+    font-size: 0.9em !important;
 }
 
 .button {
-    width: 120px;
-    height: auto;
-    padding: 8px;
+    width: 120px !important;
+    height: auto !important;
+    padding: 8px !important;
     font-size: 0.9em !important;
-    border: 2px solid #81bd42;
+    border: 2px solid #81bd42 !important;
     border-radius: 10px !important;
-    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.5);
+    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.5) !important;
 }
 
 /* ------------------------------Main header -----------------------------------*/
@@ -114,10 +114,17 @@ h1 {
     border-bottom: 3px solid #bd4f2f !important;
 }
 
-/* ---------------------------------- Guilde community ------------------------------------- */
-#simpleUtilisation img,
-#rechargeSection img {
+/* -----------------------------Inscription section------------------------------------ */
+#inscriptionSection form {
     border-radius: 5px;
+}
+
+#inscriptionSection form label {
+    font-weight: 700;
+}
+
+#inscriptionSection form input {
+    border: 2px solid #703322;
 }
 
 /* -----------------------------footer------------------------------------ */
