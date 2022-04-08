@@ -79,8 +79,13 @@
         </div>
     </header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-4 bg-body rounded sticky-top my-1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-2 p-sm-4 bg-body rounded sticky-top my-1">
         <div class="container">
+            <div class="logoResponsive greenlightBac text-center d-flex align-items-center">
+                <a href="index.html">
+                    <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#responsiveNavbar"
                 aria-controls="responsiveNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fas fa-bars"></span>
@@ -100,6 +105,12 @@
                     <li class="nav-item ms-4">
                         <a class="nav-link darkBrownCol p-1" href="#contactSection">Contact</a>
                     </li>
+                    <li class="connectionResponsive nav-item ms-4">
+                        <a class="nav-link darkBrownCol p-1" href="Views/connection.html">Se connecter</a>
+                    </li>
+                    <li class="inscriptionResponsive nav-item ms-4">
+                        <a class="nav-link darkBrownCol p-1" href="Views/inscription.html">S'inscrire</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -108,7 +119,7 @@
     <section id="carouselSection">
         <div class="container">
             <div class="row">
-                <div class="col-6 offset-3 my-5">
+                <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-xl-6 offset-xl-3 my-4 my-lg-5">
                     <h2 class="text-center darkBrownCol dancingFont">La nature n'est pas une décharge, agissons
                         ensemble !
                     </h2>
@@ -174,14 +185,14 @@
     <section id="cardsSection" class="my-5">
         <div class="container">
             <div class="row">
-                <div class="col-8 offset-2 my-5">
+                <div class="col-10 offset-1 col-xl-8 offset-xl-2 mt-4 mb-5 my-lg-5">
                     <h2 class="text-center darkBrownCol dancingFont mt-4">Chacun a un rôle à jouer à son niveau.
                         C'est
                         pourquoi, nous devons tous nous interroger sur ce que nous pouvons faire !
                     </h2>
                 </div>
             </div>
-            <div class="row row-cols-3 g-4">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-5 g-xl-4">
                 <div class="col">
                     <div class="card h-100">
                         <img src="public/images/home/cards/card1.jpg" class="card-img-top"
@@ -290,22 +301,23 @@
     <section id="frameSection">
         <div class="container">
             <div class="row">
-                <div class="col-6 offset-3 my-5">
+                <div class="col-10 offset-1 col-sm-8 offset-sm-2 my-5">
                     <h2 class="text-center darkBrownCol dancingFont mb-2">Agissons ensemble !</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="imageBox col-8 offset-2 d-flex flex-row">
-                    <div class="handsFrame boxShadow">
-                        <img src="public/images/home/frame/frame1.jpg"
-                            alt="Photo de mains tenant une pousse de plante.">
-                    </div>
+                <div class="imageBox col-10 offset-1 col-lg-6 offset-lg-2 d-lg-flex flex-lg-row">
                     <div class="childsFrame boxShadow">
-                        <img src="public/images/home/frame/frame2.jpg"
-                            alt="Photo d'enfants de différentes nationalités tenant des pancartes pour sauver la planète.">
+                        <img src="public/images/home/frame/frame1.jpg"
+                            alt="Enfants de différentes nationalités tenant des pancartes pour sauver la planète."
+                            class="d-block w-100">
+                        <div class="frameText">
+                            <p class="whiteCol dancingFont text-center p-xl-5 p-xxl-5">Chacun a son rôle à jouer mais
+                                ensemble, on est plus forts.</p>
+                        </div>
                     </div>
-                    <div class="frameText whiteCol dancingFont text-center">
-                        <p>Chacun a son rôle à jouer mais ensemble, on est plus forts.</p>
+                    <div class="handsFrame boxShadow">
+                        <img src="public/images/home/frame/frame2.jpg" alt="Des mains tenant une pousse de plante.">
                     </div>
                 </div>
             </div>
@@ -315,7 +327,7 @@
     <section id="discoveryApplySection" class="bladeBrownBac pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-6 offset-3 my-5">
+                <div class="col-12 col-lg-6 offset-lg-3 my-5">
                     <h2 class="text-center greenlightCol dancingFont">Découvrez l'application</h2>
                 </div>
             </div>
@@ -336,28 +348,33 @@
                 </div>
             </div>
             <div class="row">
-                <form action="post" class="col-8 offset-2">
+                <form action="post" class="col-8 offset-2 col-lg-8 offset-lg-2">
                     <div class="formBorder p-4">
                         <div class="row my-4">
-                            <label for="pseudo" class="darkBrownCol col-2 offset-1 p-0">Votre pseudo</label>
-                            <div class="col-5 ms-2 p-0">
-                                <input type="text" id="pseudo" class="bladeBrownBac">
+                            <label for="pseudo" class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 p-0 mb-2">Votre
+                                pseudo</label>
+                            <div class="col-12 col-md-4 ms-0 ms-md-2 p-0">
+                                <input type="text" id="pseudo" class="bladeBrownBac w-100">
                             </div>
                         </div>
                         <div class="row mb-4">
-                            <label for="email" class="darkBrownCol col-2 offset-1 p-0">Votre email</label>
-                            <div class="col-5 ms-2 p-0">
-                                <input type="email" id="email" class="bladeBrownBac">
+                            <label for="email"
+                                class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 ps-2 p-lg-0">Votre
+                                email</label>
+                            <div class="col-12 col-md-4 ms-0 ms-md-2 p-0">
+                                <input type="email" id="email" class="bladeBrownBac w-100">
                             </div>
                         </div>
                         <div class="row mb-4">
-                            <label for="textarea" class="darkBrownCol col-2 offset-1 p-0">Votre message</label>
-                            <div class="col-8 ms-2 p-0">
-                                <textarea id="textarea" class="bladeBrownBac"></textarea>
+                            <label for="textarea"
+                                class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 col-xl-2 offset-xl-1 ps-2 p-lg-0">Votre
+                                message</label>
+                            <div class="col-12 col-md-8 ms-0 ms-md-2 p-0">
+                                <textarea id="textarea" class="bladeBrownBac w-100"></textarea>
                             </div>
                         </div>
                         <div class="row"><button type="button"
-                                class="button greenlightBac whiteCol col-2 offset-3 mt-2">Envoyer</button>
+                                class="button greenlightBac whiteCol col-12 col-md-2 offset-md-3 mt-2">Envoyer</button>
                         </div>
                     </div>
                 </form>
@@ -368,15 +385,16 @@
     <footer class="mt-5">
         <div class="container-fluid bladeBrownBac">
             <div class="row">
-                <div class="notices col-12 d-flex flex-row justify-content-between align-items-end pt-3">
+                <div
+                    class="notices col-12 d-flex flex-column justify-content-between align-items-center d-md-flex flex-md-row justify-content-md-between align-items-md-end pt-3 px-0">
                     <div class="legalNotice p-2">
-                        <ul class="d-flex flex-row">
+                        <ul class="d-flex flex-row d-md-flex flex-md-column d-lg-flex flex-lg-row px-0">
                             <li class="px-2"><a href="#" class="black">Mentions légales</a></li>
                             <li class="px-2"><a href="#" class="black">Confidentialité</a></li>
                             <li class="px-2"><a href="#" class="black">Cookies</a></li>
                         </ul>
                     </div>
-                    <div class="ficionalWebSite p-2">
+                    <div class="ficionalWebSite text-center p-2">
                         <p>Site web fictif réalisé pour un projet d'études</p>
                     </div>
                     <div class="socialNetworks p-2">

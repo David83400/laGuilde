@@ -28,7 +28,7 @@
     <meta property="og:site_name" content="laGuilde" />
 
     <!-- personal css -->
-    <link rel="stylesheet" href="../public/css/inscription.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,18 +69,23 @@
                 </div>
                 <div class="col-lg-6 d-flex flex-row-reverse align-items-center">
                     <div><button type="button" class="button greenlightBac whiteCol ms-5"
-                            onclick="window.location.href = '../Views/inscription.html';">S'inscrire</button>
+                            onclick="window.location.href = 'inscription.html';">S'inscrire</button>
                     </div>
                     <div><button type="button" class="button whitebac black"
-                            onclick="window.location.href = '../Views/connection.html';">Se
+                            onclick="window.location.href = 'connection.html';">Se
                             connecter</button></div>
                 </div>
             </div>
         </div>
     </header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-4 bg-body rounded sticky-top my-1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-2 p-sm-4 bg-body rounded sticky-top my-1">
         <div class="container">
+            <div class="logoResponsive greenlightBac text-center d-flex align-items-center">
+                <a href="../index.html">
+                    <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#responsiveNavbar"
                 aria-controls="responsiveNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fas fa-bars"></span>
@@ -92,14 +97,19 @@
                                 class="fas fa-home"></i></a>
                     </li>
                     <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="../Views/laGuilde.html">La guilde</a>
+                        <a class="nav-link darkBrownCol p-1" href="laGuilde.html">La guilde</a>
                     </li>
                     <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="../Views/discoverAppli.html">Découvrez
-                            l'application</a>
+                        <a class="nav-link darkBrownCol p-1" href="discoverAppli.html">Découvrez l'application</a>
                     </li>
                     <li class="nav-item ms-4">
                         <a class="nav-link darkBrownCol p-1" href="../index.html#contactSection">Contact</a>
+                    </li>
+                    <li class="connectionResponsive nav-item ms-4">
+                        <a class="nav-link darkBrownCol p-1" href="connection.html">Se connecter</a>
+                    </li>
+                    <li class="inscriptionResponsive nav-item ms-4">
+                        <a class="nav-link darkBrownCol p-1" href="inscription.html">S'inscrire</a>
                     </li>
                 </ul>
             </div>
@@ -113,66 +123,59 @@
                     <h2 class="text-center darkBrownCol dancingFont mt-3">S'inscrire</h2>
                 </div>
             </div>
-            <form action="post" class="row boxShadow col-6 offset-3 py-5">
-                <div class="row mt-4 mb-3">
-                    <div class="col-8 offset-2 p-0">
+            <form action="post"
+                class="row boxShadow col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 my-3 p-4 p-sm-5">
+                <div class="row mt-4 mb-1">
+                    <div class="col-12 mb-2 p-0">
                         <input type="text" id="pseudo" class="bladeBrownBac form-control w-100 mb-1"
                             placeholder="Votre pseudo">
                         <span class="greenlightCol">5 à 19 caractères</span>
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <div class="col-8 offset-2 mb-2 p-0">
-                        <input type="email" id="email" class="bladeBrownBac form-control w-100"
-                            placeholder="Votre email">
+                    <div class="col-12 mb-2 p-0">
+                        <input type="email" id="email" class="bladeBrownBac form-control" placeholder="Votre email">
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <div class="col-8 offset-2 mb-2 p-0">
-                        <input type="email" id="emailConfirm" class="bladeBrownBac form-control w-100"
+                    <div class="col-12 mb-2 p-0">
+                        <input type="email" id="emailConfirm" class="bladeBrownBac form-control"
                             placeholder="Confirmez votre email">
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-8 offset-2 p-0">
-                        <input type="text" id="password" class="bladeBrownBac form-control w-100 mb-1"
+                <div class="row mb-1">
+                    <div class="col-12 mb-2 p-0">
+                        <input type="text" id="password" class="bladeBrownBac form-control mb-1"
                             placeholder="Votre mot de passe">
                         <span class="greenlightCol">8 caractères minimum</span>
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <div class="col-8 offset-2 mb-2 p-0">
-                        <input type="text" id="passwordConfirm" class="bladeBrownBac form-control w-100"
-                            placeholder="Confirmez votre mot de passe">
+                    <div class="col-12 mb-2 p-0">
+                        <input type="text" id="passwordConfirm" class="bladeBrownBac form-control"
+                            placeholder="Confirmez le mot de passe">
                     </div>
                 </div>
                 <div class="row"><button type="button"
-                        class="button greenlightBac whiteCol boxShadow col-8 offset-2 mb-1 ps-0">Envoyer</button>
+                        class="greenlightBac whiteCol boxShadow col-12 mb-1 ps-0">S'inscrire</button>
                 </div>
             </form>
         </div>
     </section>
-
-
-
-
-
-
-
-
     <!-- footer -->
-    <footer>
+    <footer class="mt-5">
         <div class="container-fluid bladeBrownBac">
             <div class="row">
-                <div class="notices col-12 d-flex flex-row justify-content-between align-items-end pt-3">
+                <div
+                    class="notices col-12 d-flex flex-column justify-content-between align-items-center d-md-flex flex-md-row justify-content-md-between align-items-md-end pt-3 px-0">
                     <div class="legalNotice p-2">
-                        <ul class="d-flex flex-row">
+                        <ul class="d-flex flex-row d-md-flex flex-md-column d-lg-flex flex-lg-row px-0">
                             <li class="px-2"><a href="#" class="black">Mentions légales</a></li>
                             <li class="px-2"><a href="#" class="black">Confidentialité</a></li>
                             <li class="px-2"><a href="#" class="black">Cookies</a></li>
                         </ul>
                     </div>
-                    <div class="ficionalWebSite p-2">
+                    <div class="ficionalWebSite text-center p-2">
                         <p>Site web fictif réalisé pour un projet d'études</p>
                     </div>
                     <div class="socialNetworks p-2">

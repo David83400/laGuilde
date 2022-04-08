@@ -72,19 +72,20 @@ a:hover {
 
 p,
 li,
+span,
 label,
 [placeholder] {
-    font-size: 0.9em;
+    font-size: 0.9em !important;
 }
 
 .button {
-    width: 120px;
-    height: auto;
-    padding: 8px;
+    width: 120px !important;
+    height: auto !important;
+    padding: 8px !important;
     font-size: 0.9em !important;
-    border: 2px solid #81bd42;
+    border: 2px solid #81bd42 !important;
     border-radius: 10px !important;
-    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.5);
+    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.5) !important;
 }
 
 /* ------------------------------Main header -----------------------------------*/
@@ -93,7 +94,8 @@ h1 {
     font-size: 28px !important;
 }
 
-.logo {
+.logo,
+.logoResponsive {
     width: auto !important;
     height: auto;
     padding: 10px;
@@ -101,6 +103,10 @@ h1 {
 }
 
 /* ----------------------------------Navbar------------------------------------- */
+.navbar .logoResponsive {
+    display: none !important;
+}
+
 .navbar .nav-item i {
     font-size: 1.1em;
 }
@@ -112,6 +118,11 @@ h1 {
 .navbar .nav-item a:focus {
     color: #bd4f2f !important;
     border-bottom: 3px solid #bd4f2f !important;
+}
+
+.navbar .connectionResponsive,
+.navbar .inscriptionResponsive {
+    display: none;
 }
 
 /* -----------------------------Carousel section------------------------------------ */
@@ -144,16 +155,34 @@ h1 {
 }
 
 /* -----------------------------Frame section------------------------------------ */
-/* Image box */
+#frameSection {
+    margin-bottom: 180px;
+}
+
 #frameSection .imageBox {
     position: relative;
 }
 
-#frameSection .handsFrame {
+#frameSection .childsFrame {
     z-index: 2;
 }
 
-#frameSection .childsFrame {
+#frameSection .childsFrame .frameText {
+    position: absolute;
+    top: 355px;
+    left: 0px;
+    width: 80%;
+    height: 128px;
+    z-index: 3;
+}
+
+#frameSection .childsFrame .frameText p {
+    font-size: 36px !important;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+#frameSection .handsFrame {
     position: absolute;
     top: 105px;
     left: 395px;
@@ -164,26 +193,6 @@ h1 {
 #frameSection .handsFrame img,
 #frameSection .childsFrame img {
     border-radius: 10px !important;
-}
-
-#frameSection .frameText {
-    position: absolute;
-    top: 490px;
-    left: 414px;
-    width: 393px;
-    height: 128px;
-    z-index: 3;
-}
-
-#frameSection .frameText p {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 35px;
-}
-
-/* -----------------------------Discovery appli section------------------------------------ */
-#discoveryApplySection {
-    margin-top: 180px;
 }
 
 /* -----------------------------Contact section------------------------------------ */
@@ -200,12 +209,12 @@ h1 {
 }
 
 #contactSection form textarea {
-    width: 100%;
+    /*width: 100%;*/
     height: 180px;
     border: 2px solid #703322;
 }
 
-/* -----------------------------footer------------------------------------ */
+/* ----------------------------- footer ------------------------------------ */
 footer .notices {
     height: 130px;
 }
@@ -221,4 +230,211 @@ footer li .bi {
 
 footer li .bi:hover {
     color: #48701c;
+}
+
+/* ---------------------------------------- Guilde page and Discover appli page -------------------------------- */
+#guildeCommunity img,
+#getInvolved img,
+#simpleUtilisation img,
+#rechargeSection img {
+    border-radius: 5px;
+}
+
+#simpleUtilisation .imgResponsive,
+#rechargeSection .imgResponsive {
+    display: none;
+}
+
+#getInvolved {
+    margin-bottom: 60px;
+}
+
+/* --------------------------------------------------- Inscription and connection pages --------------------------------------- */
+
+/* -----------------------------Inscription and connection form sections ------------------------------------ */
+#inscriptionSection form,
+#connectionSection form {
+    border-radius: 5px;
+}
+
+#inscriptionSection form label,
+#connectionSection form label {
+    font-weight: 700;
+}
+
+#inscriptionSection form input,
+#connectionSection form input {
+    border: 2px solid #703322;
+}
+
+#inscriptionSection form button,
+#connectionSection form button {
+    height: 35px !important;
+    font-size: 0.9em !important;
+    border: 2px solid #81bd42 !important;
+    border-radius: 10px !important;
+    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.5) !important;
+}
+
+#inscriptionSection form button:hover,
+#connectionSection form button:hover {
+    background-color: #ffffff !important;
+    color: #48701c !important;
+    font-weight: 900;
+    box-shadow: 4px 4px 16px rgba(39, 39, 39, 0.5) !important;
+}
+
+/* ----------------------------- Media queries ------------------------------------ */
+@media all and (min-width: 1400px) {
+
+    /* Frame section */
+    #frameSection .childsFrame .frameText {
+        left: -15px;
+        width: 70%;
+    }
+}
+
+@media all and (max-width: 1200px) {
+
+    /* Frame section */
+    #frameSection .childsFrame .frameText {
+        top: 395px;
+        left: 14px;
+        width: 80%;
+    }
+
+    /* Guilde page and Discover appli page */
+    #simpleUtilisation .imgResponsive,
+    #rechargeSection .imgResponsive {
+        display: initial;
+    }
+}
+
+@media all and (max-width: 992px) {
+
+    /* Main styles */
+    h2 {
+        font-size: 42px !important;
+    }
+
+    /* Main header */
+    header {
+        display: none;
+    }
+
+    /* Navbar */
+    .navbar .logoResponsive {
+        display: initial !important;
+    }
+
+    .navbar .logoResponsive h1 {
+        font-size: 22px !important;
+    }
+
+    .navbar .connectionResponsive,
+    .navbar .inscriptionResponsive {
+        display: initial;
+    }
+
+    /* Carousel section */
+    .carousel-indicators {
+        bottom: -65px !important;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    /* Frame section */
+    #frameSection .childsFrame .frameText {
+        top: 610px;
+        left: 58px;
+        width: 80%;
+    }
+
+    #frameSection .childsFrame .frameText p {
+        /*font-size: 40px !important;*/
+        line-height: 45px;
+    }
+
+    #frameSection .handsFrame {
+        display: none;
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    /* Main styles */
+    h2 {
+        font-size: 38px !important;
+    }
+
+    p,
+    a,
+    li,
+    span,
+    label,
+    [placeholder] {
+        font-size: 0.85em !important;
+    }
+
+    /* Carousel section */
+    .carousel-indicators {
+        bottom: -55px !important;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    /* Frame section */
+    #frameSection .childsFrame .frameText {
+        top: 443px;
+        left: 23px;
+        width: 90%;
+    }
+
+    #frameSection .childsFrame .frameText p {
+        font-size: 36px !important;
+        line-height: 38px;
+    }
+
+    footer .notices {
+        height: 195px;
+    }
+}
+
+@media all and (max-width: 576px) {
+
+    /* Main styles */
+    h2 {
+        font-size: 26px !important;
+    }
+
+    [placeholder] {
+        font-size: 0.7em !important;
+    }
+
+    /* Navbar */
+    .navbar .logoResponsive h1 {
+        font-size: 18px !important;
+    }
+
+    /* Carousel section */
+    .carousel-indicators [data-bs-target] {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    /* Frame section */
+    #frameSection .childsFrame .frameText {
+        display: none;
+    }
+
+    /* footer */
+    footer .notices {
+        height: 235px;
+    }
 }

@@ -28,7 +28,7 @@
     <meta property="og:site_name" content="laGuilde" />
 
     <!-- personal css -->
-    <link rel="stylesheet" href="../public/css/laGuilde.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,18 +69,23 @@
                 </div>
                 <div class="col-lg-6 d-flex flex-row-reverse align-items-center">
                     <div><button type="button" class="button greenlightBac whiteCol ms-5"
-                            onclick="window.location.href = '../Views/inscription.html';">S'inscrire</button>
+                            onclick="window.location.href = 'inscription.html';">S'inscrire</button>
                     </div>
                     <div><button type="button" class="button whitebac black"
-                            onclick="window.location.href = '../Views/connection.html';">Se
+                            onclick="window.location.href = 'connection.html';">Se
                             connecter</button></div>
                 </div>
             </div>
         </div>
     </header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-4 bg-body rounded sticky-top my-1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-2 p-sm-4 bg-body rounded sticky-top my-1">
         <div class="container">
+            <div class="logoResponsive greenlightBac text-center d-flex align-items-center">
+                <a href="../index.html">
+                    <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#responsiveNavbar"
                 aria-controls="responsiveNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fas fa-bars"></span>
@@ -92,14 +97,19 @@
                                 class="fas fa-home"></i></a>
                     </li>
                     <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="../Views/laGuilde.html">La guilde</a>
+                        <a class="nav-link darkBrownCol p-1" href="laGuilde.html">La guilde</a>
                     </li>
                     <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="../Views/discoverAppli.html">Découvrez
-                            l'application</a>
+                        <a class="nav-link darkBrownCol p-1" href="discoverAppli.html">Découvrez l'application</a>
                     </li>
                     <li class="nav-item ms-4">
                         <a class="nav-link darkBrownCol p-1" href="../index.html#contactSection">Contact</a>
+                    </li>
+                    <li class="connectionResponsive nav-item ms-4">
+                        <a class="nav-link darkBrownCol p-1" href="connection.html">Se connecter</a>
+                    </li>
+                    <li class="inscriptionResponsive nav-item ms-4">
+                        <a class="nav-link darkBrownCol p-1" href="inscription.html">S'inscrire</a>
                     </li>
                 </ul>
             </div>
@@ -140,29 +150,29 @@
                     </p>
                 </div>
             </div>
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  g-5 g-xl-4">
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card1.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card1.jpg" class="boxShadow d-block w-100"
                         alt="Mains les unes sur les autres en signe de partenariat.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card2.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card2.jpg" class="boxShadow d-block w-100"
                         alt="Bénévoles ramassant des déchets dans la nature.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card3.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card3.jpg" class="boxShadow d-block w-100"
                         alt="Hommes et femmes brandissant des pancartes pour sauver la planète contre le plastique et les déchets sauvages.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card4.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card4.jpg" class="boxShadow d-block w-100"
                         alt="Bénévoles ramassant des déchets dans la nature.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card5.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card5.jpg" class="boxShadow d-block w-100"
                         alt="Bénévoles ramassant des déchets dans la forêt.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card6.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card6.jpg" class="boxShadow d-block w-100"
                         alt="Bénévoles ramassant des déchets dans un lac.">
                 </div>
             </div>
@@ -172,7 +182,7 @@
     <section id="getInvolved" class="mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-8 offset-2 mt-5">
+                <div class="col-8 offset-2 mt-5 p-0">
                     <h2 class="text-center darkBrownCol dancingFont mt-4">Impliquez vous et proposez des actions à la
                         communauté !</h2>
                 </div>
@@ -193,63 +203,64 @@
                     </p>
                 </div>
             </div>
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  g-5 g-xl-4">
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card7.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card7.jpg" class="boxShadow d-block w-100"
                         alt="La patte d'un chien dans la main d'une femme, une preuve d'amour.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card8.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card8.jpg" class="boxShadow d-block w-100"
                         alt="Un chiot carressé par une main.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card9.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card9.jpg" class="boxShadow d-block w-100"
                         alt="Un lapin mange dans la main d'une femme.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card10.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card10.jpg" class="boxShadow d-block w-100"
                         alt="Un cheval sent une main qui vient le caresser.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card11.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card11.jpg" class="boxShadow d-block w-100"
                         alt="Un écureuil mange dans la main d'un homme.">
                 </div>
                 <div class="col">
-                    <img src="../public/images/guildePage/cards/card12.jpg" class="boxShadow"
+                    <img src="../public/images/guildePage/cards/card12.jpg" class="boxShadow d-block w-100"
                         alt="Une petite chèvre sent une main.">
                 </div>
             </div>
         </div>
     </section>
     <!-- Discovery application section -->
-    <section id="discoveryApplySection" class="bladeBrownBac mt-5 pb-5">
+    <section id="discoveryApplySection" class="bladeBrownBac pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-6 offset-3 my-5">
+                <div class="col-12 col-lg-6 offset-lg-3 my-5">
                     <h2 class="text-center greenlightCol dancingFont">Découvrez l'application</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="mapAppli boxShadow col-8 offset-2 p-0">
-                    <img src="../public/images/openStreetMap/openstreetmap1.jpg" class="w-100"
+                    <img src="../public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100"
                         alt="Carte Openstreetmap">
                 </div>
             </div>
         </div>
     </section>
     <!-- footer -->
-    <footer>
+    <footer class="mt-5">
         <div class="container-fluid bladeBrownBac">
             <div class="row">
-                <div class="notices col-12 d-flex flex-row justify-content-between align-items-end pt-3">
+                <div
+                    class="notices col-12 d-flex flex-column justify-content-between align-items-center d-md-flex flex-md-row justify-content-md-between align-items-md-end pt-3 px-0">
                     <div class="legalNotice p-2">
-                        <ul class="d-flex flex-row">
+                        <ul class="d-flex flex-row d-md-flex flex-md-column d-lg-flex flex-lg-row px-0">
                             <li class="px-2"><a href="#" class="black">Mentions légales</a></li>
                             <li class="px-2"><a href="#" class="black">Confidentialité</a></li>
                             <li class="px-2"><a href="#" class="black">Cookies</a></li>
                         </ul>
                     </div>
-                    <div class="ficionalWebSite p-2">
+                    <div class="ficionalWebSite text-center p-2">
                         <p>Site web fictif réalisé pour un projet d'études</p>
                     </div>
                     <div class="socialNetworks p-2">
