@@ -68,10 +68,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6 d-flex flex-row-reverse align-items-center">
-                    <div><button type="button" class="button greenlightBac whiteCol ms-5"
+                    <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5"
                             onclick="window.location.href = '../Views/inscription.html';">S'inscrire</button>
                     </div>
-                    <div><button type="button" class="button whitebac black"
+                    <div><button type="button" class="button whitebac black boxShadow"
                             onclick="window.location.href = '../Views/connection.html';">Se
                             connecter</button></div>
                 </div>
@@ -235,7 +235,7 @@
                 </div>
                 <div class="col imgResponsive">
                     <img src="../public/images/discoverAppliPage/cards/card8.jpg" class="boxShadow d-block w-100"
-                        alt="Une randonneuse marche dans un paysage de montagne.">
+                        alt="Un paysage de montagne avec un lac.">
                 </div>
             </div>
         </div>
@@ -275,7 +275,7 @@
         </div>
     </section>
     <!-- Share photo section -->
-    <section id="sharePhoto" class="mt-5">
+    <section id="sharePhoto" class="d-flex flex-column mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-8 offset-2 my-5">
@@ -301,9 +301,71 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
-
-            </div>
+            <ul class="row row-cols-2 row-cols-lg-3 d-lg-flex justify-content-lg-center align-items-lg-center pellMell">
+                <li class="col mixesImg" data-animation-rotate="-15" data-animation-translate-x="10"
+                    data-animation-translate-Y="-200">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg1.jpg" class="boxShadow"
+                            alt="Une aurore boréale au dessus d'un lac la nuit.">
+                    </div>
+                </li>
+                <li class="col mixesImg" data-animation-rotate="-12" data-animation-translate-x="-108"
+                    data-animation-translate-Y="338">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg2.jpg" class="boxShadow"
+                            alt="Une petite cascade qui se jette dans une piscine naturelle.">
+                    </div>
+                </li>
+                <li class="col mixesImg" data-animation-rotate="15" data-animation-translate-x="523"
+                    data-animation-translate-Y="91">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg3.jpg" class="boxShadow"
+                            alt="Un coucher de soleil au dessus de la mer.">
+                    </div>
+                </li>
+                <li class="col mixesImg" data-animation-rotate="25" data-animation-translate-x="310"
+                    data-animation-translate-Y="-307">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg4.jpg" class="boxShadow"
+                            alt="Des randonneurs marchent sur un chemin côtier.">
+                    </div>
+                </li>
+                <li class="col mixesImg" data-animation-rotate="-15" data-animation-translate-x="-493"
+                    data-animation-translate-Y="360">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg5.jpg" class="boxShadow"
+                            alt="Un lac au milieu d'un paysage de montagne.">
+                    </div>
+                </li>
+                <li class="col mixesImg" data-animation-rotate="18" data-animation-translate-x="-343"
+                    data-animation-translate-Y="87">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg6.jpg" class="boxShadow"
+                            alt="Des randonneurs marchent dans la montagne.">
+                    </div>
+                </li>
+                <li class="col mixesImg" data-animation-rotate="-18" data-animation-translate-x="-362"
+                    data-animation-translate-Y="67">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg7.jpg" class="boxShadow"
+                            alt="Une randonneuse marche sur un parcours de montagne.">
+                    </div>
+                </li>
+                <li class="col mixesImg" data-animation-rotate="12" data-animation-translate-x="410"
+                    data-animation-translate-Y="451">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg8.jpg" class="boxShadow"
+                            alt="Un paysage de bord de mer avec un temps nuageux.">
+                    </div>
+                </li>
+                <li class="col mixesImg" data-animation-rotate="15" data-animation-translate-x="121"
+                    data-animation-translate-Y="71">
+                    <div class="image">
+                        <img src="../public/images/discoverAppliPage/mixesImg/mixesImg9.jpg" class="boxShadow"
+                            alt="Un randonneur marche sur un parcours de montagne.">
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
     <!-- Discovery application section -->
@@ -318,6 +380,13 @@
                 <div class="mapAppli boxShadow col-8 offset-2 p-0">
                     <img src="../public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100"
                         alt="Carte Openstreetmap">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="appli.html">
+                        <button type="button" class="button greenlightBac whiteCol boxShadow">Découvrir</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -356,6 +425,11 @@
 
     <script src="./dist/polyfill.bundle.js"></script>
     <script src="./dist/app.bundle.js"></script>
+
+    <!-- Personal js link -->
+    <script src="../javascript/ojects/PellMell.js"></script>
+    <script src="../javascript/ojects/main.js"></script>
+    <script src="../javascript/scripts.js"></script>
 </body>
 
 </html>

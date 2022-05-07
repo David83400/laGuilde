@@ -1,6 +1,6 @@
 /* Main colors and fonts */
 .greenlightCol {
-    color: #81bd42;
+    color: #81bd42 !important;
 }
 
 .greenlightBac {
@@ -57,8 +57,16 @@ h2 {
     font-weight: bold !important;
 }
 
+h4 {
+    font-size: 20px !important;
+}
+
 h5 {
     font-weight: bold !important;
+}
+
+li {
+    list-style-type: none;
 }
 
 a {
@@ -85,7 +93,6 @@ label,
     font-size: 0.9em !important;
     border: 2px solid #81bd42 !important;
     border-radius: 10px !important;
-    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.5) !important;
 }
 
 /* ------------------------------Main header -----------------------------------*/
@@ -232,7 +239,7 @@ footer li .bi:hover {
     color: #48701c;
 }
 
-/* ---------------------------------------- Guilde page and Discover appli page -------------------------------- */
+/* ---------------------------- Guilde page and Discover appli page main styles -------------------------------- */
 #guildeCommunity img,
 #getInvolved img,
 #simpleUtilisation img,
@@ -249,9 +256,47 @@ footer li .bi:hover {
     margin-bottom: 60px;
 }
 
-/* --------------------------------------------------- Inscription and connection pages --------------------------------------- */
+/* ---------------------------------------- Discover appli page -------------------------------- */
+#sharePhoto {
+    height: 1600px;
+}
 
-/* -----------------------------Inscription and connection form sections ------------------------------------ */
+/* Pell mell */
+#sharePhoto .pellMell {
+    position: relative;
+    width: 100%;
+    height: 830px;
+    z-index: 0;
+}
+
+#sharePhoto .pellMell li:nth-child(4),
+#sharePhoto .pellMell li:nth-child(5),
+#sharePhoto .pellMell li:nth-child(8) {
+    z-index: 1;
+}
+
+#sharePhoto .pellMell li:nth-child(1),
+#sharePhoto .pellMell li:nth-child(2),
+#sharePhoto .pellMell li:nth-child(3),
+#sharePhoto .pellMell li:nth-child(7),
+#sharePhoto .pellMell li:nth-child(9) {
+    z-index: 2;
+}
+
+#sharePhoto .pellMell li:nth-child(6) {
+    z-index: 3;
+}
+
+
+#sharePhoto li {
+    position: absolute;
+    transform-origin: center;
+    transition-delay: 0;
+    transition: transform 2s;
+}
+
+/* ------------------------------------------ Inscription and connection pages ------------------------------- */
+/* Inscription and connection form sections */
 #inscriptionSection form,
 #connectionSection form {
     border-radius: 5px;
@@ -282,6 +327,77 @@ footer li .bi:hover {
     color: #48701c !important;
     font-weight: 900;
     box-shadow: 4px 4px 16px rgba(39, 39, 39, 0.5) !important;
+}
+
+/* ------------------------------------------- Appli list page ---------------------------------------------- */
+#appliSection .container-fluid {
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+}
+
+#appliSection .item {
+    display: flex;
+    margin: 0 20px 20px 0;
+    border: 1px solid rgba(39, 39, 39, 0.2);
+    cursor: pointer;
+}
+
+#appliSection .item:hover {
+    box-shadow: 6px 6px 14px rgba(39, 39, 39, 0.5);
+}
+
+#appliSection .itemText {
+    padding: 10px;
+}
+
+#appliSection .item,
+#appliSection .image,
+#appliSection .itemText {
+    border-radius: 5px;
+}
+
+#appliSection .image img {
+    border-radius: 5px 0 0 5px;
+}
+
+#appliSection h4 {
+    margin-bottom: 5px;
+}
+
+#appliSection .map {
+    position: sticky !important;
+    top: 75.42px !important;
+    right: 0 !important;
+    height: 100vh !important;
+}
+
+.leaflet-popup-content-wrapper {
+    width: 250px;
+}
+
+/* ------------------------------------------- hiking page ---------------------------------------------- */
+#hikingSection .container-fluid {
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+}
+
+#hikingSection .map {
+    position: sticky !important;
+    top: 75.42px !important;
+    right: 0 !important;
+    height: 100vh !important;
+}
+
+#hikingSection .itemText P {
+    text-align: justify;
+}
+
+#hikingSection .fa {
+    font-size: 1.5em;
+}
+
+#hikingSection li span {
+    font-size: 1em !important;
 }
 
 /* ----------------------------- Media queries ------------------------------------ */
