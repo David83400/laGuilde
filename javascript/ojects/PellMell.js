@@ -27,8 +27,12 @@ class PellMell {
     onIntersection(entries) {
         for (const entry of entries) {
             if (entry.isIntersecting) {
-                document.addEventListener('scroll', this.onScroll);
-                this.loadPellMell();
+                if (window.matchMedia("(min-width: 992px)").matches) {
+                    document.addEventListener('scroll', this.onScroll);
+                    this.loadPellMell();
+                } else {
+                    document.removeEventListener('scroll', this.onScroll);
+                }
             } else {
                 document.removeEventListener('scroll', this.onScroll);
             }
@@ -42,5 +46,5 @@ class PellMell {
     }
 }
 
-//Call of the méthode for the load of the pell mell animation
+//Call of the méthod for the load of the pell mell animation
 PellMell.bind();

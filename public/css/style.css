@@ -51,6 +51,10 @@
     box-shadow: 6px 6px 14px rgba(39, 39, 39, 0.5);
 }
 
+.blurButton {
+    filter: blur(3px);
+}
+
 /* Main styles */
 h2 {
     font-size: 48px !important;
@@ -295,6 +299,11 @@ footer li .bi:hover {
     transition: transform 2s;
 }
 
+#sharePhoto li .image3,
+#sharePhoto li .image6 {
+    max-width: 275px;
+}
+
 /* ------------------------------------------ Inscription and connection pages ------------------------------- */
 /* Inscription and connection form sections */
 #inscriptionSection form,
@@ -362,6 +371,10 @@ footer li .bi:hover {
 
 #appliSection h4 {
     margin-bottom: 5px;
+}
+
+#appliSection span a {
+    display: none;
 }
 
 #appliSection .map {
@@ -477,6 +490,54 @@ footer li .bi:hover {
     #frameSection .handsFrame {
         display: none;
     }
+
+    /* Discover appli page */
+    /* Pell mell */
+    #sharePhoto {
+        height: 1530px;
+    }
+
+    #sharePhoto .pellmell {
+        position: initial;
+    }
+
+    #sharePhoto li {
+        position: initial;
+    }
+
+    #sharePhoto li img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    #sharePhoto .pellMell li:nth-child(2),
+    #sharePhoto .pellMell li:nth-child(3),
+    #sharePhoto .pellMell li:nth-child(4),
+    #sharePhoto .pellMell li:nth-child(5),
+    #sharePhoto .pellMell li:nth-child(6),
+    #sharePhoto .pellMell li:nth-child(7),
+    #sharePhoto .pellMell li:nth-child(9) {
+        display: none;
+    }
+
+    /* Appli list page */
+    #appliSection .container-fluid {
+        display: initial;
+    }
+
+    #appliSection .item {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    #appliSection span a {
+        display: initial;
+    }
+
+    /* hiking page */
+    #hikingSection .container-fluid {
+        display: initial;
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -517,6 +578,21 @@ footer li .bi:hover {
         line-height: 38px;
     }
 
+    /* Discover appli page */
+    /* Pell mell */
+    #sharePhoto {
+        height: 1420px;
+    }
+
+    #sharePhoto .pellMell {
+        height: 660px;
+    }
+
+    /* hiking page */
+    #hikingSection li span {
+        font-size: 0.85em !important;
+    }
+
     footer .notices {
         height: 195px;
     }
@@ -547,6 +623,16 @@ footer li .bi:hover {
     /* Frame section */
     #frameSection .childsFrame .frameText {
         display: none;
+    }
+
+    /* Discover appli page */
+    /* Pell mell */
+    #sharePhoto {
+        height: 1300px;
+    }
+
+    #sharePhoto .pellMell {
+        height: 300px;
     }
 
     /* footer */
