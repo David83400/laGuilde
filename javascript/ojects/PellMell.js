@@ -1,5 +1,11 @@
+/**
+ * Manage the pell mell animation in the discoverApply page
+ */
 class PellMell {
-
+    /**
+     * Constructor of the pellMell
+     * @param {HTMLElement} element 
+     */
     constructor(element) {
         this.element = element;
         this.rotate = parseFloat(this.element.dataset.animationRotate);
@@ -13,17 +19,26 @@ class PellMell {
         observer.observe(element)
     }
 
-    // method to charge the pell mell when scrolling
+    /**
+     * Animation of the pell mell
+     */
     loadPellMell() {
         this.element.style.transform = "rotate(" + this.rotate + "deg) translateX(" + this.translateX + "px) translateY(" + this.translateY + "px)";
     }
 
+    /**
+     * Set up of the middle of the screen to launch the animation when there is an intersection with the pell mell
+     */
     onScroll() {
         window.requestAnimationFrame(() => {
             this.screenY = window.scrollY + window.innerHeight / 2;
         });
     }
 
+    /**
+     * Manage the observation of intersection between the pell mell and the screen to launch the animation
+     * @param {IntersectionObserverEntry[]} entries 
+     */
     onIntersection(entries) {
         for (const entry of entries) {
             if (entry.isIntersecting) {
@@ -39,6 +54,10 @@ class PellMell {
         }
     }
 
+    /**
+     * 
+     * @returns {PellMell[]}
+     */
     static bind() {
         return Array.from(document.querySelectorAll('[data-animation-rotate], [data-animation-translateX], [data-animation-translateY]')).map((element) => {
             return new PellMell(element);

@@ -1,4 +1,12 @@
+/**
+ * Manage the frontend part of inscription form
+ */
 class FormValidate {
+    /**
+     * Constructor of the inscription form
+     * @param {string} pseudoRegex 
+     * @param {string} emailRegex 
+     */
     constructor(pseudoRegex, emailRegex) {
         this.pseudoRegex = pseudoRegex;
         this.emailRegex = emailRegex;
@@ -18,6 +26,9 @@ class FormValidate {
 
     }
 
+    /**
+     * Manage the entered value in the pseudo input
+     */
     pseudoVerif() {
         if ((!this.pseudoRegex.test(this.pseudoInput.value)) || (this.pseudoInput.value.length <= 4) || (this.pseudoInput.value.length >= 20)) {
             this.pseudoInput.style.borderColor = '#F86300';
@@ -28,7 +39,9 @@ class FormValidate {
         }
     }
 
-    // méthode pour vérifier la validité de la réponse dans le champ prénom du formulaire
+    /**
+     * Manage the entered value in the email input
+     */
     emailVerif() {
         if (!this.emailRegex.test(this.emailInput.value)) {
             this.emailInput.style.borderColor = '#F86300';
@@ -39,6 +52,9 @@ class FormValidate {
         }
     }
 
+    /**
+     * Manage the entered value in the email confirm input
+     */
     emailConfirmVerif() {
         if (this.emailConfirmInput.value !== this.emailInput.value) {
             this.emailConfirmInput.style.borderColor = '#F86300';
@@ -49,6 +65,9 @@ class FormValidate {
         }
     }
 
+    /**
+     * Manage the entered value in the password input
+     */
     passwordVerif() {
         if (this.passwordInput.value.length <= 7) {
             this.passwordInput.style.borderColor = '#F86300';
@@ -59,6 +78,9 @@ class FormValidate {
         }
     }
 
+    /**
+     * Manage the entered value in the password confirm input
+     */
     passwordConfirmVerif() {
         if (this.passwordConfirmInput.value !== this.passwordInput.value) {
             this.passwordConfirmInput.style.borderColor = '#F86300';
@@ -68,7 +90,11 @@ class FormValidate {
             this.passwordConfirmValidation = true;
         }
     }
-    // méthode pour vérifier si les champs nom, prénom et le canvas sont rempli correctement
+
+
+    /**
+     * Manage the validation of the inscription form
+     */
     verifForm() {
         if ((this.pseudoValidation === true) && (this.emailValidation === true) && (this.emailConfirmValidation === true) && (this.passwordValidation === true) && (this.passwordConfirmValidation === true)) {
             document.getElementById('inscription').removeAttribute('disabled');

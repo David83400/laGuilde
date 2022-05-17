@@ -1,4 +1,11 @@
+/**
+ * Manage the creation of the leaflet map
+ */
 class LeafletMap {
+    /**
+     * Constructor of the leaflet map
+     * @param {string} container 
+     */
     constructor(container) {
         this.container = container;
 
@@ -19,6 +26,9 @@ class LeafletMap {
         }).addTo(this.map);
     }
 
+    /**
+     * Manage the loading of the map, the markers, the marker clusters and the personal icons
+     */
     loadMap() {
         // Initialization of the markers grouping
         let markers = L.markerClusterGroup();
