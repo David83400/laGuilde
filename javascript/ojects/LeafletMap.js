@@ -45,8 +45,8 @@ class LeafletMap {
                 }
             });
 
-            let greenLightIcon = new LeafIcon({ iconUrl: '../public/images/appliPage/icon/greenLightIcon.png' }),
-                greenDarkIcon = new LeafIcon({ iconUrl: '../public/images/appliPage/icon/greenDarkIcon.png' });
+            let greenLightIcon = new LeafIcon({ iconUrl: 'public/images/appliPage/icon/greenLightIcon.png' }),
+                greenDarkIcon = new LeafIcon({ iconUrl: 'public/images/appliPage/icon/greenDarkIcon.png' });
 
             // Creation of each marker and set up of the personal icon
             let marker = L.marker([latLng.lat, latLng.lng], { icon: greenLightIcon });
@@ -55,7 +55,7 @@ class LeafletMap {
             let imgMarker = item.dataset.img;
 
             // Creation of the marker popup
-            marker.bindPopup('<p><img src="' + imgMarker + '" alt="" class="w-100"/></p><h3>Randonnée</h3><p>Description courte de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la suite</a></p>').openPopup();
+            marker.bindPopup('<p><img src="' + imgMarker + '" alt="" class="w-100"/></p><h3>Randonnée</h3><p>Description courte de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la suite</a></p>').openPopup();
 
             // Addition of the markers to the grouping
             markers.addLayer(marker);

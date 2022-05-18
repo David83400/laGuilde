@@ -33,7 +33,7 @@
         crossorigin="" />
 
     <!-- personal css -->
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
         rel="stylesheet">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="../public/images/logo/favicon.png" />
+    <link rel="icon" type="image/png" href="/public/images/logo/favicon.png" />
 
     <!-- Bootstrap cdn-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -64,75 +64,18 @@
 
 <body class="black merriFont">
     <!-- Main header -->
-    <header class="shadow-sm p-3 bg-body rounded">
-        <div class="container-fluid">
-            <div class="row mt-1 mb-1">
-                <div class="col-lg-4 offset-lg-1">
-                    <div class="row">
-                        <div class="logo greenlightBac text-center d-flex align-items-center">
-                            <a href="../index.html">
-                                <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 d-flex flex-row-reverse align-items-center">
-                    <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5"
-                            onclick="window.location.href = 'inscription.html';">S'inscrire</button>
-                    </div>
-                    <div><button type="button" class="button whitebac boxShadow black"
-                            onclick="window.location.href = 'connection.html';">Se
-                            connecter</button></div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include('Views/frontend/header.php'); ?>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-2 p-sm-4 bg-body rounded sticky-top my-1">
-        <div class="container">
-            <div class="logoResponsive greenlightBac text-center d-flex align-items-center">
-                <a href="../index.html">
-                    <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#responsiveNavbar"
-                aria-controls="responsiveNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fas fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="responsiveNavbar">
-                <ul class="navbar-nav pt-3 pt-lg-0">
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active clearBrownCol p-1" aria-current="page" href="../index.html"><i
-                                class="fas fa-home"></i></a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="laGuilde.html">La guilde</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="discoverAppli.html">Découvrez l'application</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="../index.html#contactSection">Contact</a>
-                    </li>
-                    <li class="connectionResponsive nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="connection.html">Se connecter</a>
-                    </li>
-                    <li class="inscriptionResponsive nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="inscription.html">S'inscrire</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include('Views/frontend/navbar.php'); ?>
     <!-- hiking section -->
     <section id="hikingSection" class="py-5">
         <div class="container-fluid">
             <div class="information">
                 <div class="row item js-marker" data-lat="43.191199" data-lng="6.041984"
-                    data-img="../public/images/discoverAppliPage/slider/slider2.jpg">
+                    data-img="/public/images/discoverAppliPage/slider/slider2.jpg">
                     <div class="col-12">
                         <div class="itemImage boxShadow">
-                            <img src="../public/images/discoverAppliPage/slider/slider2.jpg" alt="" class="w-100">
+                            <img src="/public/images/discoverAppliPage/slider/slider2.jpg" alt="" class="w-100">
                         </div>
                     </div>
                 </div>
@@ -142,7 +85,7 @@
                             <h2 class="dancingFont darkBrownCol mt-5 mb-3">Titre de la randonnée</h2>
                             <div class="hikingInfo">
                                 <ul class="d-flex flex-wrap mb-5 p-0">
-                                    <li class="mt-3 me-3"><img src="../public/images/appliPage/icon/imgEasy.jpg" alt=""
+                                    <li class="mt-3 me-3"><img src="/public/images/appliPage/icon/imgEasy.jpg" alt=""
                                             class="me-1"><span>Facile</span></li>
                                     <li class="mt-3 me-3"><i
                                             class="fa fa-stopwatch darkBrownCol me-1"></i><span>4h00</span>
@@ -249,33 +192,7 @@
         </div>
     </section>
     <!-- footer -->
-    <footer class="mt-5">
-        <div class="container-fluid bladeBrownBac">
-            <div class="row">
-                <div
-                    class="notices col-12 d-flex flex-column justify-content-between align-items-center d-md-flex flex-md-row justify-content-md-between align-items-md-end pt-3 px-0">
-                    <div class="legalNotice p-2">
-                        <ul class="d-flex flex-row d-md-flex flex-md-column d-lg-flex flex-lg-row px-0">
-                            <li class="px-2"><a href="#" class="black">Mentions légales</a></li>
-                            <li class="px-2"><a href="#" class="black">Confidentialité</a></li>
-                            <li class="px-2"><a href="#" class="black">Cookies</a></li>
-                        </ul>
-                    </div>
-                    <div class="ficionalWebSite text-center p-2">
-                        <p>Site web fictif réalisé pour un projet d'études</p>
-                    </div>
-                    <div class="socialNetworks p-2">
-                        <ul class="d-flex flex-row">
-                            <li class="facebook px-3"><a href="#"><i class="bi bi-facebook"></i></a></li>
-                            <li class="instagram px-3"><a href="#"><i class="bi bi-instagram"></i></a></li>
-                            <li class="twitter px-3"><a href="#"><i class="bi bi-twitter"></i></a></li>
-                            <li class="pinterest px-3"><a href="#"><i class="bi bi-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include('Views/frontend/footer.php'); ?>
 
     <!-- Bootstrap js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -291,13 +208,9 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <!-- Personal js link -->
-    <script src="../javascript/ojects/LeafletMap.js"></script>
-    <script src="../javascript/ojects/main.js"></script>
-    <script src="../javascript/scripts.js"></script>
-
-
-    <script src="./dist/polyfill.bundle.js"></script>
-    <script src="./dist/app.bundle.js"></script>
+    <script src="javascript/ojects/LeafletMap.js"></script>
+    <script src="javascript/ojects/main.js"></script>
+    <script src="javascript/scripts.js"></script>
 </body>
 
 </html>

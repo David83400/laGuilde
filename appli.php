@@ -33,7 +33,7 @@
         crossorigin="" />
 
     <!-- personal css -->
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
         rel="stylesheet">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="../public/images/logo/favicon.png" />
+    <link rel="icon" type="image/png" href="/public/images/logo/favicon.png" />
 
     <!-- Bootstrap cdn-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -64,263 +64,206 @@
 
 <body class="black merriFont">
     <!-- Main header -->
-    <header class="shadow-sm p-3 bg-body rounded">
-        <div class="container-fluid">
-            <div class="row mt-1 mb-1">
-                <div class="col-lg-4 offset-lg-1">
-                    <div class="row">
-                        <div class="logo greenlightBac text-center d-flex align-items-center">
-                            <a href="../index.html">
-                                <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 d-flex flex-row-reverse align-items-center">
-                    <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5"
-                            onclick="window.location.href = 'inscription.html';">S'inscrire</button>
-                    </div>
-                    <div><button type="button" class="button whitebac boxShadow black"
-                            onclick="window.location.href = 'connection.html';">Se
-                            connecter</button></div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include('Views/frontend/header.php'); ?>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm p-2 p-sm-4 bg-body rounded sticky-top my-1">
-        <div class="container">
-            <div class="logoResponsive greenlightBac text-center d-flex align-items-center">
-                <a href="../index.html">
-                    <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#responsiveNavbar"
-                aria-controls="responsiveNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fas fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="responsiveNavbar">
-                <ul class="navbar-nav pt-3 pt-lg-0">
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active clearBrownCol p-1" aria-current="page" href="../index.html"><i
-                                class="fas fa-home"></i></a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="laGuilde.html">La guilde</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="discoverAppli.html">Découvrez l'application</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="../index.html#contactSection">Contact</a>
-                    </li>
-                    <li class="connectionResponsive nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="connection.html">Se connecter</a>
-                    </li>
-                    <li class="inscriptionResponsive nav-item ms-4">
-                        <a class="nav-link darkBrownCol p-1" href="inscription.html">S'inscrire</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include('Views/frontend/navbar.php'); ?>
     <!-- Appli section -->
     <section id="appliSection" class="py-5">
         <div class="container-fluid">
             <div class="listMap">
                 <div class="item js-marker" data-lat="43.191199" data-lng="6.041984"
-                    data-img="../public/images/home/cards/card1.jpg">
+                    data-img="/public/images/home/cards/card1.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card1.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card1.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.329229" data-lng="6.045799"
-                    data-img="../public/images/home/cards/card2.jpg">
+                    data-img="/public/images/home/cards/card2.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card2.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card2.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.237875" data-lng="6.072200"
-                    data-img="../public/images/home/cards/card3.jpg">
+                    data-img="/public/images/home/cards/card3.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card3.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card3.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.406550" data-lng="6.061187"
-                    data-img="../public/images/home/cards/card4.jpg">
+                    data-img="/public/images/home/cards/card4.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card4.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card4.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.726075" data-lng="5.812820"
-                    data-img="../public/images/home/cards/card5.jpg">
+                    data-img="/public/images/home/cards/card5.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card5.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card5.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.593539" data-lng="6.016305"
-                    data-img="../public/images/home/cards/card6.jpg">
+                    data-img="/public/images/home/cards/card6.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card6.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card6.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.700001" data-lng="6.03333"
-                    data-img="../public/images/home/cards/card6.jpg">
+                    data-img="/public/images/home/cards/card6.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card6.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card6.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.191199" data-lng="6.071984"
-                    data-img="../public/images/home/cards/card1.jpg">
+                    data-img="/public/images/home/cards/card1.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card1.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card1.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.329229" data-lng="6.145799"
-                    data-img="../public/images/home/cards/card2.jpg">
+                    data-img="/public/images/home/cards/card2.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card2.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card2.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.237875" data-lng="6.272200"
-                    data-img="../public/images/home/cards/card3.jpg">
+                    data-img="/public/images/home/cards/card3.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card3.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card3.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.406550" data-lng="6.361187"
-                    data-img="../public/images/home/cards/card4.jpg">
+                    data-img="/public/images/home/cards/card4.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card4.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card4.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.726075" data-lng="6.812820"
-                    data-img="../public/images/home/cards/card5.jpg">
+                    data-img="/public/images/home/cards/card5.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card5.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card5.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.593539" data-lng="6.716305"
-                    data-img="../public/images/home/cards/card6.jpg">
+                    data-img="/public/images/home/cards/card6.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card6.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card6.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
                 <div class="item js-marker" data-lat="43.700001" data-lng="6.63333"
-                    data-img="../public/images/home/cards/card6.jpg">
+                    data-img="/public/images/home/cards/card6.jpg">
                     <div class="image">
-                        <img src="../public/images/home/cards/card6.jpg" alt="" class="w-100">
+                        <img src="/public/images/home/cards/card6.jpg" alt="" class="w-100">
                     </div>
                     <div class="itemText">
                         <div class="itemTitle d-flex justify-content-between align-items-center">
                             <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                     carte</a></span>
                         </div>
-                        <p>Description de la randonnée ...<a href="hikingPage.html" class="greenlightCol"> Lire la
+                        <p>Description de la randonnée ...<a href="hikingPage.php" class="greenlightCol"> Lire la
                                 suite</a></p>
                     </div>
                 </div>
@@ -331,34 +274,8 @@
         </div>
     </section>
     <!-- footer -->
-    <footer class="mt-5">
-        <div class="container-fluid bladeBrownBac">
-            <div class="row">
-                <div
-                    class="notices col-12 d-flex flex-column justify-content-between align-items-center d-md-flex flex-md-row justify-content-md-between align-items-md-end pt-3 px-0">
-                    <div class="legalNotice p-2">
-                        <ul class="d-flex flex-row d-md-flex flex-md-column d-lg-flex flex-lg-row px-0">
-                            <li class="px-2"><a href="#" class="black">Mentions légales</a></li>
-                            <li class="px-2"><a href="#" class="black">Confidentialité</a></li>
-                            <li class="px-2"><a href="#" class="black">Cookies</a></li>
-                        </ul>
-                    </div>
-                    <div class="ficionalWebSite text-center p-2">
-                        <p>Site web fictif réalisé pour un projet d'études</p>
-                    </div>
-                    <div class="socialNetworks p-2">
-                        <ul class="d-flex flex-row">
-                            <li class="facebook px-3"><a href="#"><i class="bi bi-facebook"></i></a></li>
-                            <li class="instagram px-3"><a href="#"><i class="bi bi-instagram"></i></a></li>
-                            <li class="twitter px-3"><a href="#"><i class="bi bi-twitter"></i></a></li>
-                            <li class="pinterest px-3"><a href="#"><i class="bi bi-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <?php include('Views/frontend/footer.php'); ?>
+    
     <!-- Bootstrap js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -373,14 +290,9 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <!-- Personal js link -->
-    <script src="../javascript/ojects/LeafletMap.js"></script>
-    <script src="../javascript/ojects/main.js"></script>
-    <script src="../javascript/scripts.js"></script>
-
-
-    <script src="./dist/polyfill.bundle.js"></script>
-    <script src="./dist/app.bundle.js"></script>
-
+    <script src="javascript/ojects/LeafletMap.js"></script>
+    <script src="javascript/ojects/main.js"></script>
+    <script src="javascript/scripts.js"></script>
 </body>
 
 </html>
