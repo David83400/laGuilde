@@ -4,7 +4,7 @@
             <div class="col-lg-4 offset-lg-1">
                 <div class="row">
                     <div class="logo greenlightBac text-center d-flex align-items-center">
-                        <a href="index.php">
+                        <a href="home.php">
                             <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
                         </a>
                     </div>

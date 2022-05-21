@@ -28,7 +28,7 @@
     <meta property="og:site_name" content="laGuilde" />
 
     <!-- personal css -->
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +38,7 @@
         rel="stylesheet">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="/public/images/logo/favicon.png" />
+    <link rel="icon" type="image/png" href="public/images/logo/favicon.png" />
 
     <!-- Bootstrap cdn-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -50,7 +50,7 @@
     <!-- Font Awesome icons-->
     <script src="https://kit.fontawesome.com/c9ef589bf6.js" crossorigin="anonymous"></script>
 
-    <title>La Guilde | Se connecter</title>
+    <title><?= $title ?></title>
 </head>
 
 <body class="black merriFont">
@@ -58,57 +58,10 @@
     <?php include('Views/frontend/header.php'); ?>
     <!-- Navbar -->
     <?php include('Views/frontend/navbar.php'); ?>
-    <!-- Connection section -->
-    <section id="inscriptionSection" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 offset-2 mb-4">
-                    <h2 class="text-center darkBrownCol dancingFont mt-3">S'inscrire</h2>
-                </div>
-            </div>
-            <form action="post" id="form"
-                class="row boxShadow col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 my-3 p-4 p-sm-5">
-                <div class="row mt-4 mb-1">
-                    <div class="col-12 mb-2 p-0">
-                        <input type="text" id="pseudo" class="bladeBrownBac form-control w-100 mb-1"
-                            placeholder="Votre pseudo">
-                        <span class="greenlightCol">5 à 19 caractères</span>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-12 mb-2 p-0">
-                        <input type="email" id="email" class="bladeBrownBac form-control" placeholder="Votre email">
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-12 mb-2 p-0">
-                        <input type="email" id="emailConfirm" class="bladeBrownBac form-control"
-                            placeholder="Confirmez votre email">
-                    </div>
-                </div>
-                <div class="row mb-1">
-                    <div class="col-12 mb-2 p-0">
-                        <input type="text" id="password" class="bladeBrownBac form-control mb-1"
-                            placeholder="Votre mot de passe">
-                        <span class="greenlightCol">8 caractères minimum</span>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-12 mb-2 p-0">
-                        <input type="text" id="passwordConfirm" class="bladeBrownBac form-control"
-                            placeholder="Confirmez le mot de passe">
-                    </div>
-                </div>
-                <div class="row">
-                    <a href="appli.php">
-                        <button type="button" id="inscription"
-                            class="blurButton greenlightBac whiteCol boxShadow col-12 mb-1 ps-0" disabled>S'inscrire
-                        </button>
-                    </a>
-                </div>
-            </form>
-        </div>
-    </section>
+
+    <!-- content -->
+    <?= $content ?>
+
     <!-- footer -->
     <?php include('Views/frontend/footer.php'); ?>
 
@@ -116,10 +69,23 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+    <!-- leaflet js link -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <!-- leaflet markerCluster js link -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
     <!-- Personal js link -->
+    <script src="javascript/ojects/LeafletMap.js"></script>
+    <script src="javascript/ojects/PellMell.js"></script>
     <script src="javascript/ojects/FormValidate.js"></script>
     <script src="javascript/ojects/main.js"></script>
     <script src="javascript/scripts.js"></script>
+
+    <script src="dist/polyfill.bundle.js"></script>
+    <script src="dist/app.bundle.js"></script>
 </body>
 
 </html>
