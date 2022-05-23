@@ -12,10 +12,10 @@
             </div>
             <div class="col-lg-6 d-flex flex-row-reverse align-items-center">
                 <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5"
-                        onclick="window.location.href = '/inscription.php';">S'inscrire</button>
+                        onclick="window.location.href = '/Views/frontend/inscription.php';">S'inscrire</button>
                 </div>
                 <div><button type="button" class="button whitebac black boxShadow"
-                        onclick="window.location.href = '/connection.php';">Se
+                        onclick="window.location.href = '/Views/frontend/connection.php';">Se
                         connecter</button></div>
             </div>
         </div>

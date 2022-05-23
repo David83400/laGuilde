@@ -23,10 +23,10 @@
                         l'application</a>
                 </li>
                 <li class="nav-item ms-4">
-                    <a class="nav-link darkBrownCol p-1" href="Views/frontend/home.php#contactSection">Contact</a>
+                    <a class="nav-link darkBrownCol p-1" href="/Views/frontend/home.php#contactSection">Contact</a>
                 </li>
                 <li class="nav-item ms-4">
-                    <a class="nav-link darkBrownCol p-1" href="Views/frontend/index.php">test</a>
+                    <a class="nav-link darkBrownCol p-1" href="/index.php">test</a>
                 </li>
                 <li class="connectionResponsive nav-item ms-4">
                     <a class="nav-link darkBrownCol p-1" href="/Views/frontend/connection.php">Se connecter</a>

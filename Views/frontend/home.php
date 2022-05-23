@@ -29,23 +29,23 @@
                             </div>
                             <div class="carousel-inner carousel-fade">
                                 <div class="carousel-item active">
-                                    <img src="public/images/home/slider/slider1.jpg" class="d-block w-100"
+                                    <img src="/public/images/home/slider/slider1.jpg" class="d-block w-100"
                                         alt="Un lac pollué par des déchets sauvages.">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="public/images/home/slider/slider2.jpg" class="d-block w-100"
+                                    <img src="/public/images/home/slider/slider2.jpg" class="d-block w-100"
                                         alt="Une plage polluée par du plastique.">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="public/images/home/slider/slider3.jpg" class="d-block w-100"
+                                    <img src="/public/images/home/slider/slider3.jpg" class="d-block w-100"
                                         alt="La surface d'un lac polluée par du plastique.">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="public/images/home/slider/slider4.jpg" class="d-block w-100"
+                                    <img src="/public/images/home/slider/slider4.jpg" class="d-block w-100"
                                         alt="Un homme ramassant des déchets dans un lac.">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="public/images/home/slider/slider5.jpg" class="d-block w-100"
+                                    <img src="/public/images/home/slider/slider5.jpg" class="d-block w-100"
                                         alt="Une plage polluée par du plastique.">
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-5 g-xl-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="public/images/home/cards/card1.jpg" class="card-img-top"
+                    <img src="/public/images/home/cards/card1.jpg" class="card-img-top"
                         alt="Bénévoles ramassant des déchets dans la nature.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Découvrez la communauté !</h5>
@@ -98,7 +98,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="public/images/home/cards/card2.jpg" class="card-img-top"
+                    <img src="/public/images/home/cards/card2.jpg" class="card-img-top"
                         alt="Un dépot sauvage d'ordures en bord de mer.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Une application simple à utiliser !</h5>
@@ -116,7 +116,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="public/images/home/cards/card3.jpg" class="card-img-top"
+                    <img src="/public/images/home/cards/card3.jpg" class="card-img-top"
                         alt="Une femme criant dans un mégaphone.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Proposez des actions !</h5>
@@ -132,7 +132,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="public/images/home/cards/card4.jpg" class="card-img-top"
+                    <img src="/public/images/home/cards/card4.jpg" class="card-img-top"
                         alt="Un randonneur dans un paysage de montagne.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Ressourcez vous et respirez !</h5>
@@ -148,7 +148,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="public/images/home/cards/card5.jpg" class="card-img-top"
+                    <img src="/public/images/home/cards/card5.jpg" class="card-img-top"
                         alt="Un appareil photographique et d'une boussole sur une carte routière.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Créez vos parcours et partagez !</h5>
@@ -164,7 +164,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="public/images/home/cards/card6.jpg" class="card-img-top"
+                    <img src="/public/images/home/cards/card6.jpg" class="card-img-top"
                         alt="Une femme prenant une photo avec son appareil.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Partagez vos plus belles photos !</h5>
@@ -193,7 +193,7 @@
         <div class="row">
             <div class="imageBox col-10 offset-1 col-lg-6 offset-lg-2 d-lg-flex flex-lg-row">
                 <div class="childsFrame boxShadow">
-                    <img src="public/images/home/frame/frame1.jpg"
+                    <img src="/public/images/home/frame/frame1.jpg"
                         alt="Enfants de différentes nationalités tenant des pancartes pour sauver la planète."
                         class="d-block w-100">
                     <div class="frameText">
@@ -202,7 +202,7 @@
                     </div>
                 </div>
                 <div class="handsFrame boxShadow">
-                    <img src="public/images/home/frame/frame2.jpg" alt="Des mains tenant une pousse de plante.">
+                    <img src="/public/images/home/frame/frame2.jpg" alt="Des mains tenant une pousse de plante.">
                 </div>
             </div>
         </div>
@@ -218,13 +218,13 @@
         </div>
         <div class="row">
             <div class="mapAppli boxShadow col-8 offset-2 p-0">
-                <img src="public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100"
+                <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100"
                     alt="Carte Openstreetmap">
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-12 d-flex justify-content-center">
-                <a href="appli.php">
+                <a href="/Views/frontend/appli.php">
                     <button type="button" class="button greenlightBac whiteCol boxShadow">Découvrir</button>
                 </a>
             </div>

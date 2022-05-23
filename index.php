@@ -1,10 +1,15 @@
 <?php
-require('Controller/controller.php');
+require_once('Controller/controller.php');
 
-if(isset($_GET['action'])) {
-    if($_GET['action'] == 'listMembers') {
+try {
+    if(isset($_GET['action'])) {
+        if($_GET['action'] == 'listMembers') {
+            listMembers();
+        }
+    } else {
         listMembers();
     }
-} else {
-    listMembers();
+} catch(Exception $e) {
+    $errorMessage = $e->getMessage();
+    require('Views/errorView.php');
 }

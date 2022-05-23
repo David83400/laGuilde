@@ -2,9 +2,9 @@
 <?php ob_start() ?>
 <h1>Mon super blog !</h1>
 <p>Derniers billets du blog :</p>
-<a href="/home.php">retour accueil</a>
+<a href="/Views/frontend/home.php">retour accueil</a>
 
-<?php while ($data = $req->fetch())
+<?php while ($data = $members->fetch())
 {
 ?>
     <div class="news">
@@ -21,8 +21,8 @@
     </div>
 <?php
 }
-$req->closeCursor();
+$members->closeCursor();
 ?>
 <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php') ?>
+<?php require('Views/frontend/template.php') ?>

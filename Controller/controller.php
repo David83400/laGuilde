@@ -1,9 +1,10 @@
 <?php
 
-require('./Model/model.php');
+require_once('./Model/MembersManager.php');
 
 function listMembers() {
-    $req = getMembers();
+    $membersManager = new LaGuilde\projet5\Model\MembersManager();
+    $members = $membersManager->getMembers();
     
-    require('./Views/frontend/test.php');
+    require('Views/backend/test.php');
 }

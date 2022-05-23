@@ -132,7 +132,7 @@
         </div>
         <div class="row mt-5">
             <div class="col-12 d-flex justify-content-center">
-                <a href="appli.php">
+                <a href="/Views/frontend/appli.php">
                     <button type="button" class="button greenlightBac whiteCol boxShadow">Découvrir</button>
                 </a>
             </div>
