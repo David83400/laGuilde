@@ -45,8 +45,8 @@ class LeafletMap {
                 }
             });
 
-            let greenLightIcon = new LeafIcon({ iconUrl: 'public/images/appliPage/icon/greenLightIcon.png' }),
-                greenDarkIcon = new LeafIcon({ iconUrl: 'public/images/appliPage/icon/greenDarkIcon.png' });
+            let greenLightIcon = new LeafIcon({ iconUrl: '/public/images/appliPage/icon/greenLightIcon.png' }),
+                greenDarkIcon = new LeafIcon({ iconUrl: '/public/images/appliPage/icon/greenDarkIcon.png' });
 
             // Creation of each marker and set up of the personal icon
             let marker = L.marker([latLng.lat, latLng.lng], { icon: greenLightIcon });

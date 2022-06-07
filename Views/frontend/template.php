@@ -84,8 +84,8 @@
     <script src="/public/javascript/ojects/main.js"></script>
     <script src="/public/javascript/scripts.js"></script>
 
-    <script src="/Vendor/dist/polyfill.bundle.js"></script>
-    <script src="/Vendor/dist/app.bundle.js"></script>
+    <!--<script src="/Vendor/dist/polyfill.bundle.js"></script>
+    <script src="/Vendor/dist/app.bundle.js"></script>-->
 </body>
 
 </html>

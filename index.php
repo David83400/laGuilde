@@ -1,15 +1,11 @@
 <?php
-require_once('Controller/controller.php');
 
-try {
-    if(isset($_GET['action'])) {
-        if($_GET['action'] == 'listMembers') {
-            listMembers();
-        }
-    } else {
-        listMembers();
-    }
-} catch(Exception $e) {
-    $errorMessage = $e->getMessage();
-    require('Views/errorView.php');
-}
+use projet5\Autoloader;
+
+require_once 'Autoloader.php';
+Autoloader::register();
+
+use projet5\Controller\Router;
+
+$router = new Router;
+$router->routerRequest();

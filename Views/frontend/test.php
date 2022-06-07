@@ -2,7 +2,7 @@
 <?php ob_start() ?>
 <h1>Mon super blog !</h1>
 <p>Derniers billets du blog :</p>
-<a href="/Views/frontend/home.php">retour accueil</a>
+<a href="/home.php">retour accueil</a>
 
 <?php while ($data = $members->fetch())
 {
@@ -25,4 +25,4 @@ $members->closeCursor();
 ?>
 <?php $content = ob_get_clean(); ?>
 
-<?php require('Views/frontend/template.php') ?>
+<?php require('template.php') ?>

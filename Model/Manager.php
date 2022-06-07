@@ -1,5 +1,5 @@
 <?php
-namespace LaGuilde\projet5\Model;
+namespace projet5\Model;
 
 abstract class Manager {
     protected function dbConnect() {

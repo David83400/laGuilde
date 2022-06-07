@@ -10,3 +10,4 @@ let inscriptionForm = new FormValidate(
 );
 
 
+

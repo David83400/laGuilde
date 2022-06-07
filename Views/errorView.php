@@ -4,4 +4,4 @@
     <h1>Une erreur est survenue : <?= $errorMessage ?></h1>
 </section>
 <?php $content = ob_get_clean(); ?>
-<?php require('frontend/template.php') ?>
+<?php require('Frontend/template.php') ?>
