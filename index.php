@@ -1,11 +1,11 @@
 <?php
 
-use projet5\Autoloader;
+use Projet5\Autoloader;
+use Projet5\Core\Router;
 
 require_once 'Autoloader.php';
 Autoloader::register();
 
-use projet5\Controller\Router;
-
+//require_once 'Controller/Router.php';
 $router = new Router;
 $router->routerRequest();

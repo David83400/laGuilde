@@ -1,6 +1,6 @@
 <?php
 
-namespace projet5;
+namespace Projet5;
 
 /**
   * Manage the autoloader

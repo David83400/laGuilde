@@ -1,5 +1,4 @@
 <?php $title = 'La Guilde | Accueil'; ?>
-<?php ob_start() ?>
 <!-- Carousel section -->
 <section id="carouselSection">
     <div class="container">
@@ -16,46 +15,34 @@
                     <div id="carouselFade" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-shadow boxShadow">
                             <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="3"
-                                    aria-label="Slide 4"></button>
-                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="4"
-                                    aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="4" aria-label="Slide 5"></button>
                             </div>
                             <div class="carousel-inner carousel-fade">
                                 <div class="carousel-item active">
-                                    <img src="/public/images/home/slider/slider1.jpg" class="d-block w-100"
-                                        alt="Un lac pollué par des déchets sauvages.">
+                                    <img src="/public/images/home/slider/slider1.jpg" class="d-block w-100" alt="Un lac pollué par des déchets sauvages.">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/public/images/home/slider/slider2.jpg" class="d-block w-100"
-                                        alt="Une plage polluée par du plastique.">
+                                    <img src="/public/images/home/slider/slider2.jpg" class="d-block w-100" alt="Une plage polluée par du plastique.">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/public/images/home/slider/slider3.jpg" class="d-block w-100"
-                                        alt="La surface d'un lac polluée par du plastique.">
+                                    <img src="/public/images/home/slider/slider3.jpg" class="d-block w-100" alt="La surface d'un lac polluée par du plastique.">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/public/images/home/slider/slider4.jpg" class="d-block w-100"
-                                        alt="Un homme ramassant des déchets dans un lac.">
+                                    <img src="/public/images/home/slider/slider4.jpg" class="d-block w-100" alt="Un homme ramassant des déchets dans un lac.">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/public/images/home/slider/slider5.jpg" class="d-block w-100"
-                                        alt="Une plage polluée par du plastique.">
+                                    <img src="/public/images/home/slider/slider5.jpg" class="d-block w-100" alt="Une plage polluée par du plastique.">
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade"
-                                data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFade"
-                                data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
@@ -80,8 +67,7 @@
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-5 g-xl-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="/public/images/home/cards/card1.jpg" class="card-img-top"
-                        alt="Bénévoles ramassant des déchets dans la nature.">
+                    <img src="/public/images/home/cards/card1.jpg" class="card-img-top" alt="Bénévoles ramassant des déchets dans la nature.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Découvrez la communauté !</h5>
                         <p class="card-text">Au delà de son objectif de protection de l’environnement, ce projet a
@@ -91,15 +77,13 @@
                             tous les membres de la Guilde
                             étant de limiter et même d’éliminer l'impact négatif des activités de l'homme sur
                             l’environnement,
-                            associez vous ... <a href="Views/laGuilde.html#guildeCommunity"
-                                class="greenlightCol">Voir plus</a></p>
+                            associez vous ... <a href="Views/laGuilde.html#guildeCommunity" class="greenlightCol">Voir plus</a></p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/public/images/home/cards/card2.jpg" class="card-img-top"
-                        alt="Un dépot sauvage d'ordures en bord de mer.">
+                    <img src="/public/images/home/cards/card2.jpg" class="card-img-top" alt="Un dépot sauvage d'ordures en bord de mer.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Une application simple à utiliser !</h5>
                         <p class="card-text">L’application est d’une simplicité élémentaire. En effet, lorsqu'un
@@ -116,8 +100,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/public/images/home/cards/card3.jpg" class="card-img-top"
-                        alt="Une femme criant dans un mégaphone.">
+                    <img src="/public/images/home/cards/card3.jpg" class="card-img-top" alt="Une femme criant dans un mégaphone.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Proposez des actions !</h5>
                         <p class="card-text">Au delà de son objectif de protection de la nature et de tous les
@@ -125,15 +108,13 @@
                             vocation à favoriser l’émergence de nouvelles idées pour limiter l’impact de l’homme sur
                             son environnement. Grâce au
                             réseau social que nous avons mis en place dans la section membre, vous pouvez contribuer
-                            avec la communauté ... <a href="Views/laGuilde.html#getInvolved"
-                                class="greenlightCol">Voir plus</a></p>
+                            avec la communauté ... <a href="Views/laGuilde.html#getInvolved" class="greenlightCol">Voir plus</a></p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/public/images/home/cards/card4.jpg" class="card-img-top"
-                        alt="Un randonneur dans un paysage de montagne.">
+                    <img src="/public/images/home/cards/card4.jpg" class="card-img-top" alt="Un randonneur dans un paysage de montagne.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Ressourcez vous et respirez !</h5>
                         <p class="card-text">Cette application est couplée à un site de parcours de randonnées
@@ -148,8 +129,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/public/images/home/cards/card5.jpg" class="card-img-top"
-                        alt="Un appareil photographique et d'une boussole sur une carte routière.">
+                    <img src="/public/images/home/cards/card5.jpg" class="card-img-top" alt="Un appareil photographique et d'une boussole sur une carte routière.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Créez vos parcours et partagez !</h5>
                         <p class="card-text">Ce projet a également pour mission de favoriser le mieux vivre la
@@ -164,8 +144,7 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="/public/images/home/cards/card6.jpg" class="card-img-top"
-                        alt="Une femme prenant une photo avec son appareil.">
+                    <img src="/public/images/home/cards/card6.jpg" class="card-img-top" alt="Une femme prenant une photo avec son appareil.">
                     <div class="card-body">
                         <h5 class="card-title text-center py-2">Partagez vos plus belles photos !</h5>
                         <p class="card-text">Cette application a été créée pour faire prendre conscience que
@@ -174,8 +153,7 @@
                             communauté, nous avons également
                             la possibilité d’élever les consciences en montrant les beautés de la nature. Avec le
                             réseau social de la Guilde, vous
-                            avez la possibilité de partager vos photos de randonnées à la fois avec les ... <a
-                                href="Views/discoverAppli.html#sharePhoto" class="greenlightCol">Voir plus</a></p>
+                            avez la possibilité de partager vos photos de randonnées à la fois avec les ... <a href="Views/discoverAppli.html#sharePhoto" class="greenlightCol">Voir plus</a></p>
                     </div>
                 </div>
             </div>
@@ -193,9 +171,7 @@
         <div class="row">
             <div class="imageBox col-10 offset-1 col-lg-6 offset-lg-2 d-lg-flex flex-lg-row">
                 <div class="childsFrame boxShadow">
-                    <img src="/public/images/home/frame/frame1.jpg"
-                        alt="Enfants de différentes nationalités tenant des pancartes pour sauver la planète."
-                        class="d-block w-100">
+                    <img src="/public/images/home/frame/frame1.jpg" alt="Enfants de différentes nationalités tenant des pancartes pour sauver la planète." class="d-block w-100">
                     <div class="frameText">
                         <p class="whiteCol dancingFont text-center p-xl-5 p-xxl-5">Chacun a son rôle à jouer mais
                             ensemble, on est plus forts.</p>
@@ -218,8 +194,7 @@
         </div>
         <div class="row">
             <div class="mapAppli boxShadow col-8 offset-2 p-0">
-                <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100"
-                    alt="Carte Openstreetmap">
+                <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
             </div>
         </div>
         <div class="row mt-5">
@@ -250,29 +225,23 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <label for="email"
-                            class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 ps-2 p-lg-0">Votre
+                        <label for="email" class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 ps-2 p-lg-0">Votre
                             email</label>
                         <div class="col-12 col-md-4 ms-0 ms-md-2 p-0">
                             <input type="email" id="email" class="bladeBrownBac w-100">
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <label for="textarea"
-                            class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 col-xl-2 offset-xl-1 ps-2 p-lg-0">Votre
+                        <label for="textarea" class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 col-xl-2 offset-xl-1 ps-2 p-lg-0">Votre
                             message</label>
                         <div class="col-12 col-md-8 ms-0 ms-md-2 p-0">
                             <textarea id="textarea" class="bladeBrownBac w-100"></textarea>
                         </div>
                     </div>
-                    <div class="row"><button type="button"
-                            class="button greenlightBac whiteCol boxShadow col-12 col-md-2 offset-md-3 mt-2">Envoyer</button>
+                    <div class="row"><button type="button" class="button greenlightBac whiteCol boxShadow col-12 col-md-2 offset-md-3 mt-2">Envoyer</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </section>
-<?php $content = ob_get_clean(); ?>
-
-<?php require('template.php') ?>

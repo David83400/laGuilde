@@ -1,28 +1,22 @@
 <?php $title = 'La Guilde'; ?>
-<?php ob_start() ?>
+
 <h1>Mon super blog !</h1>
 <p>Derniers billets du blog :</p>
-<a href="/home.php">retour accueil</a>
+<a href="/home">retour accueil</a>
 
-<?php while ($data = $members->fetch())
-{
-?>
-    <div class="news">
-        <h3>
-            <?= htmlspecialchars($data['pseudo']) ?>
-            <em>le <?php echo $data['date_creation']; ?></em>
-        </h3>
-        
-        <p>
-            <?= htmlspecialchars($data['password']) ?>
-            <br />
-            <em><a href="#">Commentaires</a></em>
-        </p>
-    </div>
-<?php
-}
-$members->closeCursor();
-?>
-<?php $content = ob_get_clean(); ?>
+<div class="news">
+    <h3>
+        <?php foreach ($members as $member) : ?>
+            <?= $member->pseudo ?>
+            <em>le <?= $member->inscription_date ?></em>
+            <!--$member->pseudo au lieu de $member['pseudo'] grâce à fetch_OBJ dans database Core
+            au lieu de fetch assoc .... maintenant je manipule un objet -->
+    </h3>
 
-<?php require('template.php') ?>
+    <p>
+        <?= $member->password ?>
+    <?php endforeach; ?>
+    <br />
+    <em><a href="#">Commentaires</a></em>
+    </p>
+</div>

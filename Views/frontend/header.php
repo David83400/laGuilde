@@ -4,18 +4,16 @@
             <div class="col-lg-4 offset-lg-1">
                 <div class="row">
                     <div class="logo greenlightBac text-center d-flex align-items-center">
-                        <a href="home.php">
+                        <a href="/home">
                             <h1 class="whiteCol dancingFont">La guilde des nettoyeurs</h1>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 d-flex flex-row-reverse align-items-center">
-                <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5"
-                        onclick="window.location.href = '/Views/frontend/inscription.php';">S'inscrire</button>
+                <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5" onclick="window.location.href = '/login/register';">S'inscrire</button>
                 </div>
-                <div><button type="button" class="button whitebac black boxShadow"
-                        onclick="window.location.href = '/Views/frontend/connection.php';">Se
+                <div><button type="button" class="button whitebac black boxShadow" onclick="window.location.href = '/login/connection';">Se
                         connecter</button></div>
             </div>
         </div>
