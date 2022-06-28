@@ -103,24 +103,27 @@
     </div>
 </section>
 <!-- Discovery application section -->
-<section id="discoveryApplySection" class="bladeBrownBac pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-6 offset-lg-3 my-5">
-                <h2 class="text-center greenlightCol dancingFont">Découvrez l'application</h2>
+<?php if (!isset($_SESSION['member'])) {
+?>
+    <section id="discoveryApplySection" class="bladeBrownBac pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-3 my-5">
+                    <h2 class="text-center greenlightCol dancingFont">Découvrez l'application</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mapAppli boxShadow col-8 offset-2 p-0">
+                    <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/discoverAppli">
+                        <button type="button" class="button greenlightBac whiteCol boxShadow">Découvrir</button>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="mapAppli boxShadow col-8 offset-2 p-0">
-                <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-12 d-flex justify-content-center">
-                <a href="/discoverAppli">
-                    <button type="button" class="button greenlightBac whiteCol boxShadow">Découvrir</button>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+<?php } ?>

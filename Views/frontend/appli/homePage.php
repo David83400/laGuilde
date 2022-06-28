@@ -12,7 +12,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -129,7 +129,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -142,7 +142,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>
@@ -181,7 +181,7 @@
                         <h4>Randonnée ...</h4><span><a href="#map" class="greenlightCol"> Visualiser sur la
                                 carte</a></span>
                     </div>
-                    <p>Description de la randonnée ...<a href="/hikingPage" class="greenlightCol"> Lire la
+                    <p>Description de la randonnée ...<a href="/appli/hikingPage" class="greenlightCol"> Lire la
                             suite</a></p>
                 </div>
             </div>

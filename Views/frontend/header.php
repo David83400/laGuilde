@@ -11,10 +11,15 @@
                 </div>
             </div>
             <div class="col-lg-6 d-flex flex-row-reverse align-items-center">
-                <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5" onclick="window.location.href = '/login/register';">S'inscrire</button>
-                </div>
-                <div><button type="button" class="button whitebac black boxShadow" onclick="window.location.href = '/login/connection';">Se
-                        connecter</button></div>
+                <?php if (isset($_SESSION['member']) && !empty($_SESSION['member']['id'])) : ?>
+                    <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5" onclick="window.location.href = '/login/logout';">Déconnection</button>
+                    </div>
+                <?php else : ?>
+                    <div><button type="button" class="button greenlightBac whiteCol boxShadow ms-5" onclick="window.location.href = '/login/register';">S'inscrire</button>
+                    </div>
+                    <div><button type="button" class="button whitebac black boxShadow" onclick="window.location.href = '/login/connection';">Se
+                            connecter</button></div>
+                <?php endif ?>
             </div>
         </div>
     </div>

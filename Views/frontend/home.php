@@ -185,27 +185,30 @@
     </div>
 </section>
 <!-- Discovery application section -->
-<section id="discoveryApplySection" class="bladeBrownBac pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-6 offset-lg-3 my-5">
-                <h2 class="text-center greenlightCol dancingFont">Découvrez l'application</h2>
+<?php if (!isset($_SESSION['member'])) {
+?>
+    <section id="discoveryApplySection" class="bladeBrownBac pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-3 my-5">
+                    <h2 class="text-center greenlightCol dancingFont">Découvrez l'application</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mapAppli boxShadow col-8 offset-2 p-0">
+                    <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/Views/frontend/appli.php">
+                        <button type="button" class="button greenlightBac whiteCol boxShadow">Découvrir</button>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="mapAppli boxShadow col-8 offset-2 p-0">
-                <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-12 d-flex justify-content-center">
-                <a href="/Views/frontend/appli.php">
-                    <button type="button" class="button greenlightBac whiteCol boxShadow">Découvrir</button>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+<?php } ?>
 <!-- Contact section -->
 <section id="contactSection" class="mt-1">
     <div class="container">
@@ -215,33 +218,7 @@
             </div>
         </div>
         <div class="row">
-            <form action="post" class="col-8 offset-2 col-lg-8 offset-lg-2">
-                <div class="formBorder p-4">
-                    <div class="row my-4">
-                        <label for="pseudo" class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 p-0 mb-2">Votre
-                            pseudo</label>
-                        <div class="col-12 col-md-4 ms-0 ms-md-2 p-0">
-                            <input type="text" id="pseudo" class="bladeBrownBac w-100">
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <label for="email" class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 ps-2 p-lg-0">Votre
-                            email</label>
-                        <div class="col-12 col-md-4 ms-0 ms-md-2 p-0">
-                            <input type="email" id="email" class="bladeBrownBac w-100">
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <label for="textarea" class="darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 col-xl-2 offset-xl-1 ps-2 p-lg-0">Votre
-                            message</label>
-                        <div class="col-12 col-md-8 ms-0 ms-md-2 p-0">
-                            <textarea id="textarea" class="bladeBrownBac w-100"></textarea>
-                        </div>
-                    </div>
-                    <div class="row"><button type="button" class="button greenlightBac whiteCol boxShadow col-12 col-md-2 offset-md-3 mt-2">Envoyer</button>
-                    </div>
-                </div>
-            </form>
+            <?= $contactForm ?>
         </div>
     </div>
 </section>
