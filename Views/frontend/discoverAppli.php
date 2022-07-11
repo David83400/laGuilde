@@ -1,10 +1,10 @@
-<?php $title = 'La Guilde | Découvrez l\'application'; ?>
+<?php $this->title = 'La Guilde | Découvrez l\'application'; ?>
 <!-- Slider -->
 <section id="slider">
     <div class="container">
         <div class="row">
             <div class="col-12 mt-5">
-                <img src="/public/images/discoverAppliPage/slider/slider1.jpg" class="boxShadow w-100" alt="Bord de mer pollué par des déchets sauvages.">
+                <img src="images/discoverAppliPage/slider/slider1.jpg" class="boxShadow w-100" alt="Bord de mer pollué par des déchets sauvages.">
             </div>
         </div>
     </div>
@@ -43,16 +43,16 @@
         </div>
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-5 g-xl-4">
             <div class="col">
-                <img src="/public/images/discoverAppliPage/cards/card1.jpg" class="boxShadow d-block w-100" alt="Plage polluée par des déchets sauvages.">
+                <img src="images/discoverAppliPage/cards/card1.jpg" class="boxShadow d-block w-100" alt="Plage polluée par des déchets sauvages.">
             </div>
             <div class="col">
-                <img src="/public/images/discoverAppliPage/cards/card2.jpg" class="boxShadow d-block w-100" alt="Poisson mort prisonnier d'un gant en plastique.">
+                <img src="images/discoverAppliPage/cards/card2.jpg" class="boxShadow d-block w-100" alt="Poisson mort prisonnier d'un gant en plastique.">
             </div>
             <div class="col">
-                <img src="/public/images/discoverAppliPage/cards/card3.jpg" class="boxShadow d-block w-100" alt="Un lac pollué par des déchets sauvages.">
+                <img src="images/discoverAppliPage/cards/card3.jpg" class="boxShadow d-block w-100" alt="Un lac pollué par des déchets sauvages.">
             </div>
             <div class="col imgResponsive">
-                <img src="/public/images/discoverAppliPage/cards/card4.jpg" class="boxShadow d-block w-100" alt="Un lac pollué par des déchets sauvages.">
+                <img src="images/discoverAppliPage/cards/card4.jpg" class="boxShadow d-block w-100" alt="Un lac pollué par des déchets sauvages.">
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
         </div>
         <div class="row">
             <div class="col-12 my-5">
-                <img src="/public/images/discoverAppliPage/slider/slider2.jpg" class="boxShadow w-100" alt="Un randonneur dans un paysage de montagne.">
+                <img src="images/discoverAppliPage/slider/slider2.jpg" class="boxShadow w-100" alt="Un randonneur dans un paysage de montagne.">
             </div>
         </div>
     </div>
@@ -100,16 +100,16 @@
         </div>
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-5 g-xl-4">
             <div class="col">
-                <img src="/public/images/discoverAppliPage/cards/card5.jpg" class="boxShadow d-block w-100" alt="Des belles piscines naturelles.">
+                <img src="images/discoverAppliPage/cards/card5.jpg" class="boxShadow d-block w-100" alt="Des belles piscines naturelles.">
             </div>
             <div class="col">
-                <img src="/public/images/discoverAppliPage/cards/card6.jpg" class="boxShadow d-block w-100" alt="Un randonneur bivouac dans un paysage de montagne.">
+                <img src="images/discoverAppliPage/cards/card6.jpg" class="boxShadow d-block w-100" alt="Un randonneur bivouac dans un paysage de montagne.">
             </div>
             <div class="col">
-                <img src="/public/images/discoverAppliPage/cards/card7.jpg" class="boxShadow d-block w-100" alt="Une randonneuse marche dans un paysage de montagne.">
+                <img src="images/discoverAppliPage/cards/card7.jpg" class="boxShadow d-block w-100" alt="Une randonneuse marche dans un paysage de montagne.">
             </div>
             <div class="col imgResponsive">
-                <img src="/public/images/discoverAppliPage/cards/card8.jpg" class="boxShadow d-block w-100" alt="Un paysage de montagne avec un lac.">
+                <img src="images/discoverAppliPage/cards/card8.jpg" class="boxShadow d-block w-100" alt="Un paysage de montagne avec un lac.">
             </div>
         </div>
     </div>
@@ -142,7 +142,7 @@
         </div>
         <div class="row">
             <div class="col-12 mt-5">
-                <img src="/public/images/discoverAppliPage/slider/slider3.jpg" class="boxShadow w-100" alt="Deux randonneurs lisent une carte pour suivre leur parcours.">
+                <img src="images/discoverAppliPage/slider/slider3.jpg" class="boxShadow w-100" alt="Deux randonneurs lisent une carte pour suivre leur parcours.">
             </div>
         </div>
     </div>
@@ -177,47 +177,47 @@
         <ul class="row row-cols-1 row-cols-lg-3 d-lg-flex justify-content-lg-center align-items-lg-center g-5 g-lg-0 pellMell">
             <li class="col mixesImg" data-animation-rotate="-15" data-animation-translate-x="10" data-animation-translate-Y="-200">
                 <div class="image1">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg1.jpg" class="boxShadow" alt="Une aurore boréale au dessus d'un lac la nuit.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg1.jpg" class="boxShadow" alt="Une aurore boréale au dessus d'un lac la nuit.">
                 </div>
             </li>
             <li class="col mixesImg" data-animation-rotate="-12" data-animation-translate-x="-108" data-animation-translate-Y="338">
                 <div class="image2">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg2.jpg" class="boxShadow" alt="Une petite cascade qui se jette dans une piscine naturelle.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg2.jpg" class="boxShadow" alt="Une petite cascade qui se jette dans une piscine naturelle.">
                 </div>
             </li>
             <li class="col mixesImg" data-animation-rotate="5" data-animation-translate-x="423" data-animation-translate-Y="91">
                 <div class="image3">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg3.jpg" class="boxShadow" alt="Un coucher de soleil au dessus de la mer.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg3.jpg" class="boxShadow" alt="Un coucher de soleil au dessus de la mer.">
                 </div>
             </li>
             <li class="col mixesImg" data-animation-rotate="25" data-animation-translate-x="160" data-animation-translate-Y="-307">
                 <div class="image4">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg4.jpg" class="boxShadow" alt="Des randonneurs marchent sur un chemin côtier.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg4.jpg" class="boxShadow" alt="Des randonneurs marchent sur un chemin côtier.">
                 </div>
             </li>
             <li class="col mixesImg" data-animation-rotate="-15" data-animation-translate-x="-403" data-animation-translate-Y="360">
                 <div class="image5">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg5.jpg" class="boxShadow" alt="Un lac au milieu d'un paysage de montagne.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg5.jpg" class="boxShadow" alt="Un lac au milieu d'un paysage de montagne.">
                 </div>
             </li>
             <li class="col mixesImg" data-animation-rotate="18" data-animation-translate-x="-263" data-animation-translate-Y="-37">
                 <div class="image6">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg6.jpg" class="boxShadow" alt="Des randonneurs marchent dans la montagne.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg6.jpg" class="boxShadow" alt="Des randonneurs marchent dans la montagne.">
                 </div>
             </li>
             <li class="col mixesImg" data-animation-rotate="-18" data-animation-translate-x="-332" data-animation-translate-Y="67">
                 <div class="image7">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg7.jpg" class="boxShadow" alt="Une randonneuse marche sur un parcours de montagne.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg7.jpg" class="boxShadow" alt="Une randonneuse marche sur un parcours de montagne.">
                 </div>
             </li>
             <li class="col mixesImg" data-animation-rotate="12" data-animation-translate-x="260" data-animation-translate-Y="451">
                 <div class="image8">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg8.jpg" class="boxShadow" alt="Un paysage de bord de mer avec un temps nuageux.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg8.jpg" class="boxShadow" alt="Un paysage de bord de mer avec un temps nuageux.">
                 </div>
             </li>
             <li class="col mixesImg" data-animation-rotate="15" data-animation-translate-x="121" data-animation-translate-Y="71">
                 <div class="image9">
-                    <img src="/public/images/discoverAppliPage/mixesImg/mixesImg9.jpg" class="boxShadow" alt="Un randonneur marche sur un parcours de montagne.">
+                    <img src="images/discoverAppliPage/mixesImg/mixesImg9.jpg" class="boxShadow" alt="Un randonneur marche sur un parcours de montagne.">
                 </div>
             </li>
         </ul>
@@ -235,12 +235,12 @@
             </div>
             <div class="row">
                 <div class="mapAppli boxShadow col-8 offset-2 p-0">
-                    <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
+                    <img src="images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-12 d-flex justify-content-center">
-                    <a href="/login/connection">
+                    <a href="login/connection">
                         <button type="button" class="button greenlightBac whiteCol boxShadow">J'y vais</button>
                     </a>
                 </div>

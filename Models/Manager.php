@@ -38,6 +38,44 @@ class Manager extends Database
         return $this->executeRequest('SELECT * FROM ' . $this->table . ' WHERE ' . $rangesList, $values)->fetchAll();
     }
 
+    /**
+     * Search on multiple tables
+     *
+     * @param array $tables
+     * @param array $params
+     * @return void
+     */
+    public function findOnMultipleTables(array $tables, array $params, array $conditions = NULL)
+    {
+        foreach ($tables as $table) {
+            $tablesList = implode(', ', $tables);
+        }
+
+        // We explode the array $params into 2 arrays ranges => values
+        // One contains ranges, the other values
+        $ranges = [];
+        $values = [];
+
+        // We loop to explode the table
+        foreach ($params as $range => $value) {
+            $value = '\'' . $value . '\'';
+            $ranges[] = "$range = $value";
+        }
+
+        if (isset($conditions)) {
+            foreach ($conditions as $range => $value) {
+                $ranges[] = "$range = $value";
+            }
+        }
+
+        // We transform the ranges array into a string
+        $rangesList = implode(' AND ', $ranges);
+
+        // We execute request
+        $sql = $this->executeRequest('SELECT * FROM ' . $tablesList . ' WHERE ' . $rangesList)->fetch();
+        return $sql;
+    }
+
     public function find(int $id)
     {
         return $this->executeRequest('SELECT * FROM ' . $this->table . ' WHERE id=' . $id)->fetch();

@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,19 +24,12 @@
     <meta property="og:description" content="Pour une nature sans déchets, la Guilde des nettoyeurs a mis en place une application qui donne la possibilité à ses utilisateurs randonneurs de géolocaliser les décharges sauveges sur les sites naturels." />
     <meta property="og:site_name" content="laGuilde" />
 
-    <!-- personal css -->
-    <link rel="stylesheet" href="/public/css/style.css">
-
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="/public/images/logo/favicon.png" />
 
     <!-- Bootstrap cdn-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- personal css -->
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- Bootstrap icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -44,20 +37,26 @@
     <!-- Font Awesome icons-->
     <script src="https://kit.fontawesome.com/c9ef589bf6.js" crossorigin="anonymous"></script>
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/logo/favicon.png" />
+
     <title><?= $title ?></title>
 </head>
 
 <body class="black merriFont">
     <!-- Main header -->
-    <?php $header ?>
+    <?= $header ?>
     <!-- Navbar -->
-    <?php $navbar ?>
-
+    <?= $navbar ?>
     <!-- content -->
     <?= $content ?>
-
     <!-- footer -->
-    <?php $footer ?>
+    <?= $footer ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
@@ -68,14 +67,14 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <!-- Personal js link -->
-    <script src="/public/javascript/ojects/LeafletMap.js"></script>
-    <script src="/public/javascript/ojects/PellMell.js"></script>
-    <script src="/public/javascript/ojects/FormValidate.js"></script>
-    <script src="/public/javascript/ojects/main.js"></script>
-    <script src="/public/javascript/scripts.js"></script>
+    <script src="/javascript/ojects/LeafletMap.js"></script>
+    <script src="/javascript/ojects/PellMell.js"></script>
+    <script src="/javascript/ojects/FormValidate.js"></script>
+    <script src="/javascript/ojects/main.js"></script>
+    <script src="/javascript/scripts.js"></script>
 
     <!--<script src="/Vendor/dist/polyfill.bundle.js"></script>
-    <script src="/Vendor/dist/app.bundle.js"></script>-->
+        <script src="/Vendor/dist/app.bundle.js"></script>-->
 </body>
 
 </html>

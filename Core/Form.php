@@ -139,7 +139,12 @@ class Form
     {
         $this->formCode .= "<input type='$type' name='$name'";
 
-        $this->formCode .= $attributes ? $this->addAttributes($attributes) . '>' : '>';
+        if (isset($_COOKIE[$name])) {
+            $this->formCode .= " value='$_COOKIE[$name]'";
+            $this->formCode .= $attributes ? $this->addAttributes($attributes) . '>' : '>';
+        } else {
+            $this->formCode .= $attributes ? $this->addAttributes($attributes) . '>' : '>';
+        }
 
         return $this;
     }

@@ -20,22 +20,26 @@
                     <a class="nav-link darkBrownCol p-1" href="/discoverAppli">Découvrez
                         l'application</a>
                 </li>
-                <li class="nav-item ms-4">
-                    <a class="nav-link darkBrownCol p-1" href="/home#contactSection">Contact</a>
-                </li>
                 <?php if (isset($_SESSION['member']) && !empty($_SESSION['member']['id'])) : ?>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link darkBrownCol p-1" href="/appli/homePage">L'appli</a>
+                    </li>
                     <li class="nav-item dropdown ms-4">
                         <a class="nav-link dropdown-toggle darkBrownCol p-1" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-user me-2"></i><?= $_SESSION['member']['pseudo'] ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item darkBrownCol" href="/profil/displayProfil/<?= $_SESSION['member']['id']; ?>">Mon profil</a></li>
-                            <li><a class="dropdown-item darkBrownCol" href="/appli/homePage">l'appli</a></li>
+                            <li><a class="dropdown-item darkBrownCol" href="#">Mes randonnées</a></li>
+                            <li><a class="dropdown-item darkBrownCol" href="#">Mes alertes déchets</a></li>
                             <li><a class="dropdown-item darkBrownCol" href="#">Le réseau social</a></li>
                             <li><a class="dropdown-item darkBrownCol" href="#">Nous contacter</a></li>
                         </ul>
                     </li>
                 <?php else : ?>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link darkBrownCol p-1" href="/home#contactSection">Contact</a>
+                    </li>
                     <li class="connectionResponsive nav-item ms-4">
                         <a class="nav-link darkBrownCol p-1" href="/login/connection">Se connecter</a>
                     </li>

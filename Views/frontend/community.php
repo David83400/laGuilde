@@ -1,10 +1,10 @@
-<?php $title = 'La Guilde | La communauté'; ?>
+<?php $this->title = 'La Guilde | La communauté'; ?>
 <!-- Slider -->
 <section id="slider">
     <div class="container">
         <div class="row">
             <div class="col-12 my-5">
-                <img src="/public/images/guildePage/slider/slider1.jpg" class="boxShadow w-100" alt="Bénévoles ramassant des déchets dans la forêt.">
+                <img src="images/guildePage/slider/slider1.jpg" class="boxShadow w-100" alt="Bénévoles ramassant des déchets dans la forêt.">
             </div>
         </div>
     </div>
@@ -35,22 +35,22 @@
         </div>
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  g-5 g-xl-4">
             <div class="col">
-                <img src="/public/images/guildePage/cards/card1.jpg" class="boxShadow d-block w-100" alt="Mains les unes sur les autres en signe de partenariat.">
+                <img src="images/guildePage/cards/card1.jpg" class="boxShadow d-block w-100" alt="Mains les unes sur les autres en signe de partenariat.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card2.jpg" class="boxShadow d-block w-100" alt="Bénévoles ramassant des déchets dans la nature.">
+                <img src="images/guildePage/cards/card2.jpg" class="boxShadow d-block w-100" alt="Bénévoles ramassant des déchets dans la nature.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card3.jpg" class="boxShadow d-block w-100" alt="Hommes et femmes brandissant des pancartes pour sauver la planète contre le plastique et les déchets sauvages.">
+                <img src="images/guildePage/cards/card3.jpg" class="boxShadow d-block w-100" alt="Hommes et femmes brandissant des pancartes pour sauver la planète contre le plastique et les déchets sauvages.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card4.jpg" class="boxShadow d-block w-100" alt="Bénévoles ramassant des déchets dans la nature.">
+                <img src="images/guildePage/cards/card4.jpg" class="boxShadow d-block w-100" alt="Bénévoles ramassant des déchets dans la nature.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card5.jpg" class="boxShadow d-block w-100" alt="Bénévoles ramassant des déchets dans la forêt.">
+                <img src="images/guildePage/cards/card5.jpg" class="boxShadow d-block w-100" alt="Bénévoles ramassant des déchets dans la forêt.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card6.jpg" class="boxShadow d-block w-100" alt="Bénévoles ramassant des déchets dans un lac.">
+                <img src="images/guildePage/cards/card6.jpg" class="boxShadow d-block w-100" alt="Bénévoles ramassant des déchets dans un lac.">
             </div>
         </div>
     </div>
@@ -82,22 +82,22 @@
         </div>
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3  g-5 g-xl-4">
             <div class="col">
-                <img src="/public/images/guildePage/cards/card7.jpg" class="boxShadow d-block w-100" alt="La patte d'un chien dans la main d'une femme, une preuve d'amour.">
+                <img src="images/guildePage/cards/card7.jpg" class="boxShadow d-block w-100" alt="La patte d'un chien dans la main d'une femme, une preuve d'amour.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card8.jpg" class="boxShadow d-block w-100" alt="Un chiot carressé par une main.">
+                <img src="images/guildePage/cards/card8.jpg" class="boxShadow d-block w-100" alt="Un chiot carressé par une main.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card9.jpg" class="boxShadow d-block w-100" alt="Un lapin mange dans la main d'une femme.">
+                <img src="images/guildePage/cards/card9.jpg" class="boxShadow d-block w-100" alt="Un lapin mange dans la main d'une femme.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card10.jpg" class="boxShadow d-block w-100" alt="Un cheval sent une main qui vient le caresser.">
+                <img src="images/guildePage/cards/card10.jpg" class="boxShadow d-block w-100" alt="Un cheval sent une main qui vient le caresser.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card11.jpg" class="boxShadow d-block w-100" alt="Un écureuil mange dans la main d'un homme.">
+                <img src="images/guildePage/cards/card11.jpg" class="boxShadow d-block w-100" alt="Un écureuil mange dans la main d'un homme.">
             </div>
             <div class="col">
-                <img src="/public/images/guildePage/cards/card12.jpg" class="boxShadow d-block w-100" alt="Une petite chèvre sent une main.">
+                <img src="images/guildePage/cards/card12.jpg" class="boxShadow d-block w-100" alt="Une petite chèvre sent une main.">
             </div>
         </div>
     </div>
@@ -114,12 +114,12 @@
             </div>
             <div class="row">
                 <div class="mapAppli boxShadow col-8 offset-2 p-0">
-                    <img src="/public/images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
+                    <img src="images/openStreetMap/openstreetmap1.jpg" class="d-block w-100" alt="Carte Openstreetmap">
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-12 d-flex justify-content-center">
-                    <a href="/discoverAppli">
+                    <a href="discoverAppli">
                         <button type="button" class="button greenlightBac whiteCol boxShadow">Découvrir</button>
                     </a>
                 </div>

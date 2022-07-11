@@ -1,4 +1,4 @@
-<?php $title = 'La Guilde'; ?>
+<?php $this->title = 'La Guilde'; ?>
 
 <h1>Informations sur le compte de <?= $members->pseudo ?></h1>
 <article>

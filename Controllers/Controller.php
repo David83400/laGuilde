@@ -4,27 +4,49 @@ namespace Projet5\Controllers;
 
 abstract class Controller
 {
-    public function render(
-        string $file,
-        array $data = [],
-        string $template = 'Frontend/template',
-        string $header = 'Frontend/header',
-        string $navbar = 'Frontend/navbar',
-        string $footer = 'Frontend/footer'
-    ) {
-        // On extrait le contenu de $data
-        extract($data);
+    private $file;
+    private $title;
 
-        ob_start();
+    /**
+     * Generate and display views
+     *
+     * @param string $file
+     * @param array $data
+     * @param string $template
+     * @return void
+     */
+    public function render(string $file, array $data = [], string $template = 'Frontend/template')
+    {
+        $content = $this->generateFile($file, $data);
+        $header = $this->generateFile("Frontend/header", $data);
+        $navbar = $this->generateFile("Frontend/navbar", $data);
+        //$session = $this->generateFile('session', $data);
+        $footer = $this->generateFile("Frontend/footer", $data);
+        $view = $this->generateFile($template, array(
+            'title' => $this->title,
+            'header' => $header,
+            'navbar' => $navbar,
+            //'session' => $session,
+            'content' => $content,
+            'footer' => $footer
+        ));
 
-        // On créé le chemin vers la vue
-        require_once 'Views/' . $file . '.php';
+        echo $view;
+    }
 
-        $content = ob_get_clean();
+    private function generateFile(string $file, array $data = [])
+    {
+        $this->file = ROOT . '/Views/' . $file . '.php';
 
-        require_once 'Views/' . $header . '.php';
-        require_once 'Views/' . $navbar . '.php';
-        require_once 'Views/' . $template . '.php';
-        require_once 'Views/' . $footer . '.php';
+        if (file_exists($this->file)) {
+            extract($data);
+            ob_start();
+            require $this->file;
+            return ob_get_clean();
+        } else {
+            var_dump($file);
+            die;
+            throw new \Exception('le fichier ' . $file . ' est introuvable');
+        }
     }
 }

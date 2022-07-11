@@ -4,6 +4,7 @@ namespace Projet5\Controllers\Frontend;
 
 use Projet5\Controllers\Controller;
 use Projet5\Models\Frontend\MembersModel;
+use Projet5\Models\Frontend\MembersEmailModel;
 use Projet5\Core\Form;
 
 class loginController extends controller
@@ -15,27 +16,53 @@ class loginController extends controller
      */
     public function connection()
     {
-        if (Form::validate($_POST, ['pseudo', 'password'])) {
-            $membersModel = new MembersModel;
-            $memberArray = $membersModel->findOneByPseudo(strip_tags($_POST['pseudo']));
-            if (!$memberArray) {
-                $_SESSION['error'] = 'Informations incorrectes';
-                header('location:/login/connection');
-                exit;
-            }
+        $membersModel = new MembersModel();
+        $membersEmailModel = new MembersEmailModel();
 
-            $member = $membersModel->hydrate($memberArray);
 
-            if (password_verify($_POST['password'], $member->getPassword())) {
-                $member->setSession();
-                header('location:/home');
-                exit;
+        if ($_POST) {
+            if (Form::validate($_POST, ['pseudo', 'email', 'password'])) {
+                $memberArray = $membersModel->findOnMultipleTables(['members', 'members_email'], ['members.pseudo' => strip_tags($_POST['pseudo']), 'members_email.email' => strip_tags($_POST['email'])]);
+
+                if (!$memberArray) {
+                    $_SESSION['error'] = 'Informations incorrectes';
+                    header('location:/login/connection');
+                    exit;
+                }
+
+                $member = $membersModel->hydrate($memberArray);
+                $memberEmail = $membersEmailModel->hydrate($memberArray);
+
+                if (password_verify($_POST['password'], $member->getPassword())) {
+                    $member->setSession();
+                    $memberEmail->setSession();
+
+                    if (isset($_POST['rememberMe'])) {
+                        setcookie('pseudo', $_SESSION['member']['pseudo'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                        setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                    }
+
+                    if (isset($_SESSION['member']['is_admin']) && $_SESSION['member']['is_admin'] === 1) {
+                        $_SESSION['success'] = 'Vous êtes connecté à l\'administration';
+                        header('location:/admin');
+                        exit;
+                    } else {
+                        $_SESSION['success'] = 'Vous êtes connecté';
+                        header('location:/home');
+                        exit;
+                    }
+                } else {
+                    $_SESSION['error'] = 'Informations incorrectes';
+                    header('location:/login/connection');
+                    exit;
+                }
             } else {
-                $_SESSION['error'] = 'Informations incorrectes';
+                $_SESSION['error'] = 'Tous les champs doivent être remplis';
                 header('location:/login/connection');
                 exit;
             }
         }
+
 
         $connectionForm = new Form;
 
@@ -55,20 +82,28 @@ class loginController extends controller
             ->addInput('text', 'password', ['id' => 'password', 'class' => 'bladeBrownBac form-control w-100', 'placeholder' => 'Votre mot de passe'])
             ->endDiv()
             ->endDiv()
+            ->initDiv(['class' => 'row mb-4'])
+            ->initDiv(['class' => 'col-12 mb-2 p-0'])
+            ->addInput('checkbox', 'rememberMe', ['id' => 'rememberMe', 'class' => 'bladeBrownBac'])
+            ->addLabelFor('rememberMe', 'Se souvenir de moi', ['class' => 'darkBrownCol ps-3'])
+            ->endDiv()
+            ->endDiv()
             ->initDiv(['class' => 'row'])
             ->addButton('submit', 'formConnect', 'envoyer', ['class' => 'greenlightBac whiteCol boxShadow col-12 mb-1 ps-0'])
             ->endDiv()
             ->initDiv(['class' => 'row mt-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addLink('#', 'Mot de passe oublié ?', ['class' => 'greenLightCol'])
+            ->addLink('#', 'Mot de passe oublié ?', ['class' => 'greenlightCol'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addLink('/login/register', 'Vous n\'avez pas encore de compte ?', ['class' => 'greenLightCol'])
+            ->addLink('/login/register', 'Vous n\'avez pas encore de compte ?', ['class' => 'greenlightCol'])
             ->endDiv()
             ->endDiv()
             ->endForm();
+        // var_dump($connectionForm);
+        // die;
         $this->render('Frontend/login/connection', ['connectionForm' => $connectionForm->create()]);
     }
 
@@ -79,21 +114,67 @@ class loginController extends controller
      */
     public function register()
     {
-        // on vérifie si le formulaire est valide
-        if (Form::validate($_POST, ['pseudo', 'password'])) {
-            // On nettoie l'adresse email
-            $pseudo = strip_tags($_POST['pseudo']);
-            // On chiffre le mot de passe
-            $pass = password_hash($_POST['password'], PASSWORD_ARGON2I);
+        if ($_POST) {
+            if (Form::validate($_POST, ['pseudo', 'email', 'emailConfirm', 'password', 'passwordConfirm'])) {
 
-            // On hydrate le membre
-            $member = new MembersModel;
+                $pseudo = strip_tags($_POST['pseudo']);
+                $email = strip_tags($_POST['email']);
+                $pass = password_hash($_POST['password'], PASSWORD_ARGON2I);
 
-            $member->setPseudo($pseudo)
-                ->setPassword($pass);
+                $memberModel = new MembersModel;
+                $memberEmailModel = new MembersEmailModel;
 
-            // On stocke le membre en base de données
-            $member->create();
+                $memberPseudo = $memberModel->findOneByPseudo($pseudo);
+
+                if ($memberPseudo === false || strcmp($memberPseudo->pseudo, $pseudo) !== 0) {
+                    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                        $memberEmail = $memberEmailModel->findOneByEmail($email);
+
+                        if (!$memberEmail) {
+                            $memberModel->setPseudo($pseudo)
+                                ->setPassword($pass);
+
+                            $memberModel->create();
+
+                            $member = $memberModel->findBy(['pseudo' => $pseudo, 'password' => $pass]);
+                            $memberId = $member['0']->id;
+                            $memberEmailModel->setEmail($email)
+                                ->setMember_Id($memberId);
+
+                            // On stocke le membre en base de données
+                            $memberEmailModel->create();
+
+                            $memberModel->setSession();
+                            $memberEmailModel->setSession();
+
+                            if (isset($_POST['rememberMe'])) {
+                                setcookie('pseudo', $_SESSION['member']['pseudo'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                                setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                            }
+
+                            $_SESSION['success'] = 'Votre compte a été créé avec succés !';
+                            header('Location: /');
+                            exit;
+                        } else {
+                            $_SESSION['error'] = 'Cet email est déjà associé à un compte';
+                            header('location:/login/register');
+                            exit;
+                        }
+                    } else {
+                        $_SESSION['error'] = 'L\'email n\'est pas conforme';
+                        header('location:/login/register');
+                        exit;
+                    }
+                } else {
+                    $_SESSION['error'] = 'Ce pseudo est déjà utilisé';
+                    header('location:/login/register');
+                    exit;
+                }
+            } else {
+                $_SESSION['error'] = 'Tous les champs doivent être remplis';
+                header('location:/login/register');
+                exit;
+            }
         }
 
         $registerForm = new Form;
@@ -102,7 +183,7 @@ class loginController extends controller
             ->initDiv(['class' => 'row mt-4 mb-1'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
             ->addInput('text', 'pseudo', ['id' => 'pseudo', 'class' => 'bladeBrownBac form-control w-100 mb-1', 'placeholder' => 'Votre pseudo'])
-            ->addSpan('5 à 19 caractères', ['class' => 'greenLightCol'])
+            ->addSpan('5 à 19 caractères', ['class' => 'greenlightCol'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
@@ -118,12 +199,18 @@ class loginController extends controller
             ->initDiv(['class' => 'row mb-1'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
             ->addInput('text', 'password', ['id' => 'password', 'class' => 'bladeBrownBac form-control mb-1', 'placeholder' => 'Votre mot de passe'])
-            ->addSpan('8 caractères minimum', ['class' => 'greenLightCol'])
+            ->addSpan('8 caractères minimum', ['class' => 'greenlightCol'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
             ->addInput('text', 'passwordConfirm', ['id' => 'passwordConfirm', 'class' => 'bladeBrownBac form-control', 'placeholder' => 'Confirmez votre mot de passe'])
+            ->endDiv()
+            ->endDiv()
+            ->initDiv(['class' => 'row mb-4'])
+            ->initDiv(['class' => 'col-12 mb-2 p-0'])
+            ->addInput('checkbox', 'rememberMe', ['id' => 'rememberMe', 'class' => 'bladeBrownBac'])
+            ->addLabelFor('rememberMe', 'Se souvenir de moi', ['class' => 'darkBrownCol ps-3'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row'])
@@ -136,7 +223,7 @@ class loginController extends controller
     public function logout()
     {
         unset($_SESSION['member']);
-        header('location: ' . $_SERVER['HTTP_REFERER']);
+        header('location: /home');
         exit;
     }
 }

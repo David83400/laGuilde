@@ -1,4 +1,4 @@
-<?php $title = 'La Guilde | Parcours ....'; ?>
+<?php $this->title = 'La Guilde | Parcours ....'; ?>
 <!-- hiking section -->
 <section id="hikingSection" class="py-5">
     <div class="container-fluid">
@@ -6,7 +6,7 @@
             <div class="row item js-marker" data-lat="43.191199" data-lng="6.041984" data-img="/public/images/discoverAppliPage/slider/slider2.jpg">
                 <div class="col-12">
                     <div class="itemImage boxShadow">
-                        <img src="/public/images/discoverAppliPage/slider/slider2.jpg" alt="" class="w-100">
+                        <img src="/images/discoverAppliPage/slider/slider2.jpg" alt="" class="w-100">
                     </div>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                         <h2 class="dancingFont darkBrownCol mt-5 mb-3">Titre de la randonnée</h2>
                         <div class="hikingInfo">
                             <ul class="d-flex flex-wrap mb-5 p-0">
-                                <li class="mt-3 me-3"><img src="/public/images/appliPage/icon/imgEasy.jpg" alt="" class="me-1"><span>Facile</span></li>
+                                <li class="mt-3 me-3"><img src="/images/appliPage/icon/imgEasy.jpg" alt="" class="me-1"><span>Facile</span></li>
                                 <li class="mt-3 me-3"><i class="fa fa-stopwatch darkBrownCol me-1"></i><span>4h00</span>
                                 </li>
                                 <li class="mt-3 me-3"><i class="fa fa-shoe-prints darkBrownCol me-1"></i><span>23km</span></li>

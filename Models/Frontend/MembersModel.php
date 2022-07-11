@@ -14,12 +14,11 @@ class MembersModel extends Manager
 
     public function __construct()
     {
-
         $this->table = 'members';
     }
 
     /**
-     * Method to create member session
+     * Set the member session
      *
      * @return void
      */
@@ -128,8 +127,8 @@ class MembersModel extends Manager
      */
     public function setInscription_date($inscription_date)
     {
-        $this->inscription_date = $inscription_date;
-
+        $inscription_date = date_create($inscription_date, timezone_open("Europe/Paris"));
+        $this->inscription_date = date_format($inscription_date, 'd/m/y H:i:s');
         return $this;
     }
 }
