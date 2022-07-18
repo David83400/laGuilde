@@ -34,6 +34,22 @@ class Form
     }
 
     /**
+     * Display errors in the forms
+     *
+     * @param array $errors
+     * @return void
+     */
+    public static function displayError(array $errors)
+    {
+        return $errors;
+    }
+
+    public static function displayHits(array $hits)
+    {
+        return $hits;
+    }
+
+    /**
      * Ajoute les attributs envoyés à la balise
      *
      * @param array $attributes Tableau associatif ['class' => 'form-control', 'required' => true]
@@ -45,7 +61,7 @@ class Form
         $str = '';
 
         // On liste les attributs 'courts'
-        $shorts = ['checked', 'disabled', 'readonly', 'multiple', 'required', 'autofocus', 'novalidate', 'formnovalidate'];
+        $shorts = ['checked', 'disabled', 'readonly', 'multiple', 'required', 'autofocus', 'novalidate', 'formtarget', 'formnovalidate'];
 
         // On boucle sur le tableau d'attributs
         foreach ($attributes as $attribute => $value) {

@@ -232,6 +232,24 @@
             </div>
         </div>
         <div class="row">
+            <?php if (isset($errors)) { ?>
+                <?php foreach ($errors as $error) : ?>
+                    <div class=" alert alert-danger col-8 offset-2 col-lg-8 offset-lg-2 mb-1">
+                        <ul>
+                            <li class="text-center pt-2"><?= $error; ?></li>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
+            <?php } ?>
+            <?php if (isset($hits)) { ?>
+                <?php foreach ($hits as $hit) : ?>
+                    <div class=" alert alert-success col-8 offset-2 col-lg-8 offset-lg-2 mb-1">
+                        <ul>
+                            <li class="text-center pt-2"><?= $hit; ?></li>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
+            <?php } ?>
             <?= $contactForm ?>
         </div>
     </div>

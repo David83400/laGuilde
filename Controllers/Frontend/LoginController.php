@@ -47,7 +47,7 @@ class loginController extends controller
                         header('location:/admin');
                         exit;
                     } else {
-                        $_SESSION['success'] = 'Vous êtes connecté';
+                        $_SESSION['success'] = 'Vous vous êtes connecté avec succès';
                         header('location:/home');
                         exit;
                     }
@@ -152,7 +152,7 @@ class loginController extends controller
                                 setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
                             }
 
-                            $_SESSION['success'] = 'Votre compte a été créé avec succés !';
+                            $_SESSION['success'] = 'Votre compte a été créé avec succès !';
                             header('Location: /');
                             exit;
                         } else {
