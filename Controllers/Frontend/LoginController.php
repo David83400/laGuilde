@@ -126,7 +126,9 @@ class loginController extends controller
 
                 $memberPseudo = $memberModel->findOneByPseudo($pseudo);
 
-                if ($memberPseudo === false || strcmp($memberPseudo->pseudo, $pseudo) !== 0) {
+                if (!$memberPseudo) {
+                    // var_dump($memberPseudo);
+                    // die;
                     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                         $memberEmail = $memberEmailModel->findOneByEmail($email);
 
@@ -141,20 +143,32 @@ class loginController extends controller
                             $memberEmailModel->setEmail($email)
                                 ->setMember_Id($memberId);
 
-                            // On stocke le membre en base de données
                             $memberEmailModel->create();
 
-                            $memberModel->setSession();
-                            $memberEmailModel->setSession();
+                            $memberArray = $memberModel->findOnMultipleTables(['members', 'members_email'], ['members.pseudo' => $pseudo, 'members_email.email' => $email]);
 
-                            if (isset($_POST['rememberMe'])) {
-                                setcookie('pseudo', $_SESSION['member']['pseudo'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
-                                setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                            if ($memberArray) {
+                                $member = $memberModel->hydrate($memberArray);
+                                $memberEmail = $memberEmailModel->hydrate($memberArray);
+
+                                $memberModel->setSession();
+                                $memberEmailModel->setSession();
+
+                                if (isset($_POST['rememberMe'])) {
+                                    setcookie('pseudo', $_SESSION['member']['pseudo'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                                    setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                                }
+
+                                if (isset($_SESSION['member']['is-admin']) && $_SESSION['member']['is-admin'] === 0) {
+                                    $_SESSION['success'] = 'Votre compte a été créé avec succès !';
+                                    header('location:/home');
+                                    exit;
+                                }
+                            } else {
+                                $_SESSION['error'] = 'Une erreur s\'est produite, veuillez recommencer';
+                                header('location:/login/register');
+                                exit;
                             }
-
-                            $_SESSION['success'] = 'Votre compte a été créé avec succès !';
-                            header('Location: /');
-                            exit;
                         } else {
                             $_SESSION['error'] = 'Cet email est déjà associé à un compte';
                             header('location:/login/register');
@@ -166,6 +180,8 @@ class loginController extends controller
                         exit;
                     }
                 } else {
+                    var_dump($memberPseudo);
+                    die;
                     $_SESSION['error'] = 'Ce pseudo est déjà utilisé';
                     header('location:/login/register');
                     exit;
