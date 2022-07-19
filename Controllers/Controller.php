@@ -18,15 +18,15 @@ abstract class Controller
     public function render(string $file, array $data = [], string $template = 'Frontend/template')
     {
         $content = $this->generateFile($file, $data);
-        $header = $this->generateFile("Frontend/header", $data);
-        $navbar = $this->generateFile("Frontend/navbar", $data);
-        //$session = $this->generateFile('session', $data);
-        $footer = $this->generateFile("Frontend/footer", $data);
+        $header = $this->generateFile('Frontend/header', $data);
+        $navbar = $this->generateFile('Frontend/navbar', $data);
+        $session = $this->generateFile('session', $data);
+        $footer = $this->generateFile('Frontend/footer', $data);
         $view = $this->generateFile($template, array(
             'title' => $this->title,
             'header' => $header,
             'navbar' => $navbar,
-            //'session' => $session,
+            'session' => $session,
             'content' => $content,
             'footer' => $footer
         ));

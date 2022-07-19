@@ -53,6 +53,8 @@
     <?= $header ?>
     <!-- Navbar -->
     <?= $navbar ?>
+    <!-- Session message -->
+    <?= $session ?>
     <!-- content -->
     <?= $content ?>
     <!-- footer -->

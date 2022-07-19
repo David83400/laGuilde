@@ -1,18 +1,5 @@
 <?php $this->title = 'La Guilde | Accueil'; ?>
 
-<?php if (isset($_SESSION['success'])) {
-?>
-    <section id="sessionMessage">
-        <div class="container">
-            <div class="row">
-                <div class="alert alert-success text-center" role="alert">
-                    <h1><?php echo $_SESSION['success'];
-                        unset($_SESSION['success']) ?></h1>
-                </div>
-            </div>
-        </div>
-    </section>
-<?php } ?>
 <!-- Carousel section -->
 <section id="carouselSection">
     <div class="container">
@@ -224,29 +211,25 @@
     </section>
 <?php } ?>
 <!-- Contact section -->
-<section id="contactSection" class="mt-1">
+<section id="contactSection" class="mt-1 mb-5">
     <div class="container">
         <div class="row">
-            <div class="col-8 offset-2 my-5 p-2">
+            <div class="col-8 offset-2 mt-3 mb-5 p-2">
                 <h2 class="text-center darkBrownCol dancingFont mt-3">Contactez nous</h2>
             </div>
         </div>
         <div class="row">
             <?php if (isset($errors)) { ?>
                 <?php foreach ($errors as $error) : ?>
-                    <div class=" alert alert-danger col-8 offset-2 col-lg-8 offset-lg-2 mb-1">
-                        <ul>
-                            <li class="text-center pt-2"><?= $error; ?></li>
-                        </ul>
+                    <div class="alert bladeBrownBac boxShadow col-8 offset-2 col-lg-8 offset-lg-2 mb-3">
+                        <h4 class="darkBrownCol text-center pt-2"><?= $error; ?></h4>
                     </div>
                 <?php endforeach; ?>
             <?php } ?>
             <?php if (isset($hits)) { ?>
                 <?php foreach ($hits as $hit) : ?>
-                    <div class=" alert alert-success col-8 offset-2 col-lg-8 offset-lg-2 mb-1">
-                        <ul>
-                            <li class="text-center pt-2"><?= $hit; ?></li>
-                        </ul>
+                    <div class="alert bladeBrownBac boxShadow col-8 offset-2 col-lg-8 offset-lg-2 mb-3">
+                        <h4 class="greenlightCol text-center pt-2"><?= $hit; ?></h4>
                     </div>
                 <?php endforeach; ?>
             <?php } ?>

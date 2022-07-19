@@ -24,7 +24,7 @@
 }
 
 .bladeBrownBac {
-    background-color: #f1e6d9;
+    background-color: #f1e6d9 !important;
 }
 
 .whiteCol {
@@ -211,7 +211,8 @@ label,
 }
 
 /* -----------------------------Contact section------------------------------------ */
-#contactSection form .formBorder {
+#contactSection form .formBorder,
+#contactSection form input {
     border: 2px solid #703322;
 }
 
@@ -219,12 +220,7 @@ label,
     font-weight: 700;
 }
 
-#contactSection form input {
-    border: 2px solid #703322;
-}
-
 #contactSection form textarea {
-    /*width: 100%;*/
     height: 180px;
     border: 2px solid #703322;
 }
@@ -417,7 +413,7 @@ footer li .bi:hover {
     font-size: 1em !important;
 }
 
-/* ----------------------------- Media queries ------------------------------------ */
+/* ----------------------------- Error page ------------------------------------ */
 #error button {
     width: auto;
     height: auto;

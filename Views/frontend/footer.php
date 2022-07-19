@@ -1,8 +1,7 @@
-<footer class="mt-5">
+<footer>
     <div class="container-fluid bladeBrownBac">
         <div class="row">
-            <div
-                class="notices col-12 d-flex flex-column justify-content-between align-items-center d-md-flex flex-md-row justify-content-md-between align-items-md-end pt-3 px-0">
+            <div class="notices col-12 d-flex flex-column justify-content-between align-items-center d-md-flex flex-md-row justify-content-md-between align-items-md-end pt-3 px-0">
                 <div class="legalNotice p-2">
                     <ul class="d-flex flex-row d-md-flex flex-md-column d-lg-flex flex-lg-row px-0">
                         <li class="px-2"><a href="#" class="black">Mentions légales</a></li>
