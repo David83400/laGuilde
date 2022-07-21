@@ -51,19 +51,6 @@
     box-shadow: 6px 6px 14px rgba(39, 39, 39, 0.5);
 }
 
-.button {
-    width: 120px !important;
-    height: auto !important;
-    padding: 8px !important;
-    font-size: 0.9em !important;
-    border: 2px solid #81bd42 !important;
-    border-radius: 10px !important;
-}
-
-.blurButton {
-    filter: blur(3px);
-}
-
 /* Main styles */
 h1 {
     font-size: 32px !important;
@@ -101,6 +88,23 @@ span,
 label,
 [placeholder] {
     font-size: 0.9em !important;
+}
+
+.button {
+    width: 120px !important;
+    height: auto !important;
+    padding: 8px !important;
+    font-size: 0.9em !important;
+    border: 2px solid #81bd42 !important;
+    border-radius: 10px !important;
+}
+
+.blurButton {
+    filter: blur(3px);
+}
+
+.formBorder {
+    border: 2px solid #703322 !important;
 }
 
 /* ------------------------------Main header -----------------------------------*/
@@ -211,9 +215,8 @@ label,
 }
 
 /* -----------------------------Contact section------------------------------------ */
-#contactSection form .formBorder,
-#contactSection form input {
-    border: 2px solid #703322;
+#contactSection form .formBorder {
+    border-radius: 5px;
 }
 
 #contactSection form label {
@@ -304,25 +307,22 @@ footer li .bi:hover {
     max-width: 275px;
 }
 
-/* ------------------------------------------ Inscription and connection pages ------------------------------- */
-/* Inscription and connection form sections */
+/* ------------------------------------------ Inscription, connection and member profil pages ------------------------------- */
 #inscriptionSection form,
-#connectionSection form {
+#connectionSection form,
+#memberInfos form .formBorder {
     border-radius: 5px;
 }
 
 #inscriptionSection form label,
-#connectionSection form label {
+#connectionSection form label,
+#memberInfos form label {
     font-weight: 700;
 }
 
-#inscriptionSection form input,
-#connectionSection form input {
-    border: 2px solid #703322;
-}
-
 #inscriptionSection form button,
-#connectionSection form button {
+#connectionSection form button,
+#memberInfos form button {
     height: 35px !important;
     font-size: 0.9em !important;
     border: 2px solid #81bd42 !important;
@@ -331,7 +331,8 @@ footer li .bi:hover {
 }
 
 #inscriptionSection form button:hover,
-#connectionSection form button:hover {
+#connectionSection form button:hover,
+#memberInfos form button:hover {
     background-color: #ffffff !important;
     color: #48701c !important;
     font-weight: 900;
@@ -411,6 +412,11 @@ footer li .bi:hover {
 
 #hikingSection li span {
     font-size: 1em !important;
+}
+
+/* ----------------------------- Profil member page ------------------------------------ */
+#memberInfos p span {
+    font-weight: bold;
 }
 
 /* ----------------------------- Error page ------------------------------------ */

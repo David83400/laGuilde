@@ -78,7 +78,7 @@
                             tous les membres de la Guilde
                             étant de limiter et même d’éliminer l'impact négatif des activités de l'homme sur
                             l’environnement,
-                            associez vous ... <a href="Views/laGuilde.html#guildeCommunity" class="greenlightCol">Voir plus</a></p>
+                            associez vous ... <a href="/community#guildeCommunity" class="greenlightCol">Voir plus</a></p>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                             possibilité de la prendre en photo et de la géolocaliser. Une fois la photo prise et le
                             lieu indiqué sur la carte, le
                             randonneur ou la randonneuse n'a plus qu'à entrer les informations sur la décharge ...
-                            <a href="Views/discoverAppli.html#simpleUtilisation" class="greenlightCol">Voir plus</a>
+                            <a href="/discoverAppli#simpleUtilisation" class="greenlightCol">Voir plus</a>
                         </p>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                             vocation à favoriser l’émergence de nouvelles idées pour limiter l’impact de l’homme sur
                             son environnement. Grâce au
                             réseau social que nous avons mis en place dans la section membre, vous pouvez contribuer
-                            avec la communauté ... <a href="Views/laGuilde.html#getInvolved" class="greenlightCol">Voir plus</a></p>
+                            avec la communauté ... <a href="/community#getInvolved" class="greenlightCol">Voir plus</a></p>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                             un des différents tracés proposés par les membres de la Guilde …. laissez vous guider et
                             aérez vous l’esprit. Une fois
                             le parcours choisi, vous n’avez plus qu’à vous laisser guider par les indications ...
-                            <a href="Views/discoverAppli.html#hikingAppPresent" class="greenlightCol">Voir plus</a>
+                            <a href="/discoverAppli#hikingAppPresent" class="greenlightCol">Voir plus</a>
                         </p>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                             permettra de créer vos propres parcours de randonnée et de les partager avec les membres
                             de la communauté. Partez à la
                             découverte de lieux que vous ne connaissez pas. Faites la reconnaissance des parcours
-                            ... <a href="Views/discoverAppli.html#createJourney" class="greenlightCol">Voir plus</a>
+                            ... <a href="/discoverAppli#createJourney" class="greenlightCol">Voir plus</a>
                         </p>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                             communauté, nous avons également
                             la possibilité d’élever les consciences en montrant les beautés de la nature. Avec le
                             réseau social de la Guilde, vous
-                            avez la possibilité de partager vos photos de randonnées à la fois avec les ... <a href="Views/discoverAppli.html#sharePhoto" class="greenlightCol">Voir plus</a></p>
+                            avez la possibilité de partager vos photos de randonnées à la fois avec les ... <a href="/discoverAppli#sharePhoto" class="greenlightCol">Voir plus</a></p>
                     </div>
                 </div>
             </div>

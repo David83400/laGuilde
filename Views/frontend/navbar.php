@@ -29,11 +29,11 @@
                             <i class="fa fa-user me-2"></i><?= $_SESSION['member']['pseudo'] ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item darkBrownCol" href="/profil/displayProfil/<?= $_SESSION['member']['id']; ?>">Mon profil</a></li>
-                            <li><a class="dropdown-item darkBrownCol" href="#">Mes randonnées</a></li>
-                            <li><a class="dropdown-item darkBrownCol" href="#">Mes alertes déchets</a></li>
-                            <li><a class="dropdown-item darkBrownCol" href="#">Le réseau social</a></li>
-                            <li><a class="dropdown-item darkBrownCol" href="#">Nous contacter</a></li>
+                            <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="/profil/displayProfil/<?= $_SESSION['member']['id']; ?>">Mon profil</a></li>
+                            <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="#">Mes randonnées</a></li>
+                            <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="#">Mes alertes déchets</a></li>
+                            <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="#">Le réseau social</a></li>
+                            <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="#">Nous contacter</a></li>
                         </ul>
                     </li>
                 <?php else : ?>
