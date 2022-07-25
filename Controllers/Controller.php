@@ -44,8 +44,6 @@ abstract class Controller
             require $this->file;
             return ob_get_clean();
         } else {
-            var_dump($file);
-            die;
             throw new \Exception('le fichier ' . $file . ' est introuvable');
         }
     }

@@ -129,7 +129,7 @@ class MembersModel extends Manager
     {
         $inscription_date = date_create($inscription_date, timezone_open("Europe/Paris"));
 
-        $this->inscription_date = date_format($inscription_date, 'd/m/y H:i:s');
+        $this->inscription_date = date_format($inscription_date, 'd/m/Y à H:i:s');
 
         return $this;
     }

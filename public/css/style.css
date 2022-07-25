@@ -214,18 +214,20 @@ label,
     border-radius: 10px !important;
 }
 
-/* -----------------------------Contact section------------------------------------ */
-#contactSection form .formBorder {
+/* ----------------------------- Contact and assistance section ------------------------------------ */
+#contactSection form .border,
+#assistanceSection form .border {
     border-radius: 5px;
 }
 
-#contactSection form label {
+#contactSection form label,
+#assistanceSection form label {
     font-weight: 700;
 }
 
-#contactSection form textarea {
+#contactSection form textarea,
+#assistanceSection form textarea {
     height: 180px;
-    border: 2px solid #703322;
 }
 
 /* ----------------------------- footer ------------------------------------ */

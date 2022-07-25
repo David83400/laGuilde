@@ -12,7 +12,6 @@ class HomeController extends Controller
     public function display()
     {
         $errors = array();
-        $hits = array();
 
         if ($_POST) {
             if (Form::validate($_POST, ['pseudo', 'email', 'contactTitle', 'contactMessage'])) {
@@ -42,7 +41,9 @@ class HomeController extends Controller
 
                             $contactMessage->create();
 
-                            $hits['message'] = 'Votre message a été envoyé avec succès';
+                            $_SESSION['success'] = 'Votre message a été envoyé avec succès';
+                            header('location:/home');
+                            exit;
                         } else {
                             $visitor = $visitorModel->hydrate($visitorArray);
 
@@ -52,7 +53,9 @@ class HomeController extends Controller
 
                             $contactMessage->create();
 
-                            $hits['message'] = 'Votre message a été envoyé avec succès';
+                            $_SESSION['success'] = 'Votre message a été envoyé avec succès';
+                            header('location:/home');
+                            exit;
                         }
                     } else {
                         $errors['message'] = 'L\'email enregistré n\'est pas conforme';
@@ -66,15 +69,13 @@ class HomeController extends Controller
 
             if ($errors) {
                 Form::displayError($errors);
-            } elseif ($hits) {
-                Form::displayHits($hits);
             }
         }
 
         $contactForm = new Form;
 
-        $contactForm->initForm('post', '/home#contactSection', ['class' => 'col-8 offset-2 col-lg-8 offset-lg-2'])
-            ->initDiv(['class' => 'formBorder p-4'])
+        $contactForm->initForm('post', '', ['class' => 'col-8 offset-2 col-lg-8 offset-lg-2'])
+            ->initDiv(['class' => 'border formBorder p-4'])
             ->initDiv(['class' => 'row my-4'])
             ->addLabelFor('pseudo', 'Votre pseudo', ['class' => 'darkBrownCol col-12 col-md-3 col-lg-2 offset-lg-1 p-0 mb-2'])
             ->initDiv(['class' => 'col-12 col-md-4 ms-0 ms-md-2 p-0'])
@@ -100,10 +101,10 @@ class HomeController extends Controller
             ->endDiv()
             ->endDiv()
             ->initdiv(['class' => 'row'])
-            ->addButton('submit', 'formContact', 'Envoyer', ['class' => 'button greenlightBac whiteCol boxShadow col-12 col-md-2 offset-md-3 mt-2'])
+            ->addButton('submit', 'contactForm', 'Envoyer', ['class' => 'button greenlightBac whiteCol boxShadow col-12 col-md-2 offset-md-3 mt-2'])
             ->endDiv()
             ->endDiv()
             ->endForm();
-        $this->render('Frontend/home', ['contactForm' => $contactForm->create(), 'errors' => $errors, 'hits' => $hits]);
+        $this->render('Frontend/home', ['contactForm' => $contactForm->create(), 'errors' => $errors]);
     }
 }

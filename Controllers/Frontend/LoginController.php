@@ -22,33 +22,36 @@ class loginController extends controller
 
         if ($_POST) {
             if (Form::validate($_POST, ['pseudo', 'email', 'password'])) {
-                $memberArray = $membersModel->findOnMultipleTables(['members', 'members_email'], ['members.pseudo' => strip_tags($_POST['pseudo']), 'members_email.email' => strip_tags($_POST['email'])]);
+                $pseudo = strip_tags($_POST['pseudo']);
+                $email = strip_tags($_POST['email']);
 
-                if (!$memberArray) {
-                    $_SESSION['error'] = 'Informations incorrectes';
-                    header('location:/login/connection');
-                    exit;
-                }
+                $memberArray = $membersModel->findOnMultipleTables(['members', 'members_email'], ['members.pseudo' => $pseudo, 'members_email.email' => $email], ['members.id' => 'members_email.member_id']);
 
-                $member = $membersModel->hydrate($memberArray);
-                $memberEmail = $membersEmailModel->hydrate($memberArray);
+                if ($memberArray) {
+                    $member = $membersModel->hydrate($memberArray);
+                    $memberEmail = $membersEmailModel->hydrate($memberArray);
 
-                if (password_verify($_POST['password'], $member->getPassword())) {
-                    $member->setSession();
-                    $memberEmail->setSession();
+                    if (password_verify($_POST['password'], $member->getPassword())) {
+                        $member->setSession();
+                        $memberEmail->setSession();
 
-                    if (isset($_POST['rememberMe'])) {
-                        setcookie('pseudo', $_SESSION['member']['pseudo'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
-                        setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
-                    }
+                        if (isset($_POST['rememberMe'])) {
+                            setcookie('pseudo', $_SESSION['member']['pseudo'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                            setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
+                        }
 
-                    if (isset($_SESSION['member']['is_admin']) && $_SESSION['member']['is_admin'] === 1) {
-                        $_SESSION['success'] = 'Vous êtes connecté à l\'administration';
-                        header('location:/admin');
-                        exit;
+                        if (isset($_SESSION['member']['is_admin']) && $_SESSION['member']['is_admin'] === 1) {
+                            $_SESSION['success'] = 'Vous êtes connecté à l\'administration';
+                            header('location:/admin');
+                            exit;
+                        } else {
+                            $_SESSION['success'] = 'Vous vous êtes connecté avec succès';
+                            header('location:/home');
+                            exit;
+                        }
                     } else {
-                        $_SESSION['success'] = 'Vous vous êtes connecté avec succès';
-                        header('location:/home');
+                        $_SESSION['error'] = 'Informations incorrectes';
+                        header('location:/login/connection');
                         exit;
                     }
                 } else {
@@ -66,7 +69,7 @@ class loginController extends controller
 
         $connectionForm = new Form;
 
-        $connectionForm->initForm('post', '#', ['class' => 'row boxShadow col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 my-3 p-4'])
+        $connectionForm->initForm('post', '', ['class' => 'row boxShadow col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 my-3 p-4'])
             ->initDiv(['class' => 'row my-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
             ->addInput('text', 'pseudo', ['id' => 'pseudo', 'class' => 'formBorder bladeBrownBac form-control w-100', 'placeholder' => 'Votre pseudo'])
@@ -125,8 +128,6 @@ class loginController extends controller
                 $memberPseudo = $memberModel->findOneByPseudo($pseudo);
 
                 if (!$memberPseudo) {
-                    // var_dump($memberPseudo);
-                    // die;
                     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                         $memberEmail = $memberEmailModel->findOneByEmail($email);
 
@@ -178,8 +179,6 @@ class loginController extends controller
                         exit;
                     }
                 } else {
-                    var_dump($memberPseudo);
-                    die;
                     $_SESSION['error'] = 'Ce pseudo est déjà utilisé';
                     header('location:/login/register');
                     exit;

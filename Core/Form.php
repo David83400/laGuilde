@@ -34,7 +34,7 @@ class Form
     }
 
     /**
-     * Display errors in the forms
+     * Display error messages in the forms
      *
      * @param array $errors
      * @return void
@@ -44,6 +44,12 @@ class Form
         return $errors;
     }
 
+    /**
+     * Display success messages in the forms
+     *
+     * @param array $hits
+     * @return void
+     */
     public static function displayHits(array $hits)
     {
         return $hits;

@@ -33,7 +33,7 @@
                             <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="#">Mes randonnées</a></li>
                             <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="#">Mes alertes déchets</a></li>
                             <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="#">Le réseau social</a></li>
-                            <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="#">Nous contacter</a></li>
+                            <li><a class="dropdown-item darkBrownCol bladeBrownBac" href="/assistance">Nous contacter</a></li>
                         </ul>
                     </li>
                 <?php else : ?>
