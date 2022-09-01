@@ -132,14 +132,18 @@ class Manager extends Database
 
         foreach ($this as $range => $value) {
             if ($value !== null && $range != 'getDb' && $range != 'table') {
-                $ranges[] = $range . '= ?';
+                $ranges[] = $range . ' = ?';
                 $values[] = $value;
             }
         }
+
         $values[] = $this->id;
 
         // On transforme le tableau ranges en une chaine de caractères
         $rangesList = implode(', ', $ranges);
+
+        // var_dump($rangesList, $values);
+        // die;
 
         return $this->executeRequest('UPDATE ' . $this->table . ' SET ' . $rangesList .
             ' WHERE id = ?', $values);

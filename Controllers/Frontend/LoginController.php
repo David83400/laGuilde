@@ -10,7 +10,7 @@ use Projet5\Core\Form;
 class loginController extends controller
 {
     /**
-     * Connexion des membres
+     * Method to manage connection of members
      *
      * @return void
      */
@@ -21,9 +21,9 @@ class loginController extends controller
 
 
         if ($_POST) {
-            if (Form::validate($_POST, ['pseudo', 'email', 'password'])) {
-                $pseudo = strip_tags($_POST['pseudo']);
-                $email = strip_tags($_POST['email']);
+            if (Form::validate($_POST, ['connectionPseudo', 'connectionEmail', 'connectionPassword'])) {
+                $pseudo = strip_tags($_POST['connectionPseudo']);
+                $email = strip_tags($_POST['connectionEmail']);
 
                 $memberArray = $membersModel->findOnMultipleTables(['members', 'members_email'], ['members.pseudo' => $pseudo, 'members_email.email' => $email], ['members.id' => 'members_email.member_id']);
 
@@ -31,11 +31,11 @@ class loginController extends controller
                     $member = $membersModel->hydrate($memberArray);
                     $memberEmail = $membersEmailModel->hydrate($memberArray);
 
-                    if (password_verify($_POST['password'], $member->getPassword())) {
+                    if (password_verify($_POST['connectionPassword'], $member->getPassword())) {
                         $member->setSession();
                         $memberEmail->setSession();
 
-                        if (isset($_POST['rememberMe'])) {
+                        if (isset($_POST['connectionRememberMe'])) {
                             setcookie('pseudo', $_SESSION['member']['pseudo'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
                             setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
                         }
@@ -69,30 +69,30 @@ class loginController extends controller
 
         $connectionForm = new Form;
 
-        $connectionForm->initForm('post', '', ['class' => 'row boxShadow col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 my-3 p-4'])
+        $connectionForm->initForm('post', '#', ['id' => 'connectionForm', 'class' => 'row boxShadow col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 my-3 p-4'])
             ->initDiv(['class' => 'row my-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('text', 'pseudo', ['id' => 'pseudo', 'class' => 'formBorder bladeBrownBac form-control w-100', 'placeholder' => 'Votre pseudo'])
+            ->addInput('text', 'connectionPseudo', ['id' => 'connectionPseudo', 'class' => 'formBorder bladeBrownBac form-control w-100', 'placeholder' => 'Votre pseudo'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('email', 'email', ['id' => 'email', 'class' => 'formBorder bladeBrownBac form-control w-100', 'placeholder' => 'Votre email'])
+            ->addInput('email', 'connectionEmail', ['id' => 'connectionEmail', 'class' => 'formBorder bladeBrownBac form-control w-100', 'placeholder' => 'Votre email'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('text', 'password', ['id' => 'password', 'class' => 'formBorder bladeBrownBac form-control w-100', 'placeholder' => 'Votre mot de passe'])
+            ->addInput('password', 'connectionPassword', ['id' => 'connectionPassword', 'class' => 'formBorder bladeBrownBac form-control w-100', 'placeholder' => 'Votre mot de passe'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('checkbox', 'rememberMe', ['id' => 'rememberMe', 'class' => 'formBorder bladeBrownBac'])
+            ->addInput('checkbox', 'connectionRememberMe', ['id' => 'connectionRememberMe', 'class' => 'formBorder bladeBrownBac'])
             ->addLabelFor('rememberMe', 'Se souvenir de moi', ['class' => 'darkBrownCol ps-3'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row'])
-            ->addButton('submit', 'formConnect', 'envoyer', ['class' => 'greenlightBac whiteCol boxShadow col-12 mb-1 ps-0'])
+            ->addButton('submit', 'connectionButton', 'envoyer', ['id' => 'connectionButton', 'class' => 'blurButton greenlightBac whiteCol boxShadow col-12 mb-1 ps-0', 'disabled' => true])
             ->endDiv()
             ->initDiv(['class' => 'row mt-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
@@ -109,18 +109,18 @@ class loginController extends controller
     }
 
     /**
-     * Inscription des membres
+     * Method to manage inscription of members
      *
      * @return void
      */
     public function register()
     {
         if ($_POST) {
-            if (Form::validate($_POST, ['pseudo', 'email', 'emailConfirm', 'password', 'passwordConfirm'])) {
+            if (Form::validate($_POST, ['registerPseudo', 'registerEmail', 'registerEmailConfirm', 'registerPassword', 'registerPasswordConfirm'])) {
 
-                $pseudo = strip_tags($_POST['pseudo']);
-                $email = strip_tags($_POST['email']);
-                $pass = password_hash($_POST['password'], PASSWORD_ARGON2I);
+                $pseudo = strip_tags($_POST['registerPseudo']);
+                $email = strip_tags($_POST['registerEmail']);
+                $pass = password_hash($_POST['registerPassword'], PASSWORD_ARGON2I);
 
                 $memberModel = new MembersModel;
                 $memberEmailModel = new MembersEmailModel;
@@ -128,12 +128,14 @@ class loginController extends controller
                 $memberPseudo = $memberModel->findOneByPseudo($pseudo);
 
                 if (!$memberPseudo) {
-                    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                    if (filter_var($_POST['registerEmail'], FILTER_VALIDATE_EMAIL)) {
                         $memberEmail = $memberEmailModel->findOneByEmail($email);
 
                         if (!$memberEmail) {
+                            $inscriptionDate = 'now';
                             $memberModel->setPseudo($pseudo)
-                                ->setPassword($pass);
+                                ->setPassword($pass)
+                                ->setInscription_date($inscriptionDate);
 
                             $memberModel->create();
 
@@ -153,7 +155,7 @@ class loginController extends controller
                                 $memberModel->setSession();
                                 $memberEmailModel->setSession();
 
-                                if (isset($_POST['rememberMe'])) {
+                                if (isset($_POST['registerRememberMe'])) {
                                     setcookie('pseudo', $_SESSION['member']['pseudo'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
                                     setcookie('email', $_SESSION['memberEmail']['email'], time() + 365 * 24 * 3600, '/', 'laguilde', false, true);
                                 }
@@ -192,47 +194,52 @@ class loginController extends controller
 
         $registerForm = new Form;
 
-        $registerForm->initForm('post', '#', ['class' => 'row boxShadow col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 my-3 p-4 p-sm-5'])
+        $registerForm->initForm('post', '#', ['id' => 'registerForm', 'class' => 'row boxShadow col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 my-3 p-4 p-sm-5'])
             ->initDiv(['class' => 'row mt-4 mb-1'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('text', 'pseudo', ['id' => 'pseudo', 'class' => 'formBorder bladeBrownBac form-control w-100 mb-1', 'placeholder' => 'Votre pseudo'])
+            ->addInput('text', 'registerPseudo', ['id' => 'registerPseudo', 'class' => 'formBorder bladeBrownBac form-control w-100 mb-1', 'placeholder' => 'Votre pseudo'])
             ->addSpan('5 à 19 caractères', ['class' => 'greenlightCol'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('email', 'email', ['id' => 'email', 'class' => 'formBorder bladeBrownBac form-control', 'placeholder' => 'Votre email'])
+            ->addInput('email', 'registerEmail', ['id' => 'registerEmail', 'class' => 'formBorder bladeBrownBac form-control', 'placeholder' => 'Votre email'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('email', 'emailConfirm', ['id' => 'emailConfirm', 'class' => 'formBorder bladeBrownBac form-control', 'placeholder' => 'Confirmez votre email'])
+            ->addInput('email', 'registerEmailConfirm', ['id' => 'registerEmailConfirm', 'class' => 'formBorder bladeBrownBac form-control', 'placeholder' => 'Confirmez votre email'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-1'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('text', 'password', ['id' => 'password', 'class' => 'formBorder bladeBrownBac form-control mb-1', 'placeholder' => 'Votre mot de passe'])
+            ->addInput('password', 'registerPassword', ['id' => 'registerPassword', 'class' => 'formBorder bladeBrownBac form-control mb-1', 'placeholder' => 'Votre mot de passe'])
             ->addSpan('8 caractères minimum', ['class' => 'greenlightCol'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('text', 'passwordConfirm', ['id' => 'passwordConfirm', 'class' => 'formBorder bladeBrownBac form-control', 'placeholder' => 'Confirmez votre mot de passe'])
+            ->addInput('password', 'registerPasswordConfirm', ['id' => 'registerPasswordConfirm', 'class' => 'formBorder bladeBrownBac form-control', 'placeholder' => 'Confirmez votre mot de passe'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row mb-4'])
             ->initDiv(['class' => 'col-12 mb-2 p-0'])
-            ->addInput('checkbox', 'rememberMe', ['id' => 'rememberMe', 'class' => 'bladeBrownBac'])
+            ->addInput('checkbox', 'registerRememberMe', ['id' => 'registerRememberMe', 'class' => 'bladeBrownBac'])
             ->addLabelFor('rememberMe', 'Se souvenir de moi', ['class' => 'darkBrownCol ps-3'])
             ->endDiv()
             ->endDiv()
             ->initDiv(['class' => 'row'])
-            ->addButton('submit', 'formRegister', 'S\'inscrire', ['class' => 'greenlightBac whiteCol boxShadow col-12 mb-1 ps-0'])
+            ->addButton('submit', 'registerButton', 'S\'inscrire', ['id' => 'registerButton', 'class' => 'blurButton greenlightBac whiteCol boxShadow col-12 mb-1 ps-0', 'disabled' => true])
             ->endDiv()
             ->endForm();
         $this->render('Frontend/login/register', ['registerForm' => $registerForm->create()]);
     }
 
+    /**
+     * Method to manage logout of members
+     *
+     * @return void
+     */
     public function logout()
     {
         unset($_SESSION['member']);

@@ -43,7 +43,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="images/logo/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon.png" />
+
+    <!-- feuille de style leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+
+    <!-- feuilles de style markercluster de leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
 
     <title><?= $title ?></title>
 </head>
@@ -60,23 +67,25 @@
     <!-- footer -->
     <?= $footer ?>
 
+    <!-- Bootstrap link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <!-- leaflet js link -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
 
     <!-- leaflet markerCluster js link -->
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <!-- Personal js link -->
-    <script src="/javascript/ojects/LeafletMap.js"></script>
-    <script src="/javascript/ojects/PellMell.js"></script>
-    <script src="/javascript/ojects/FormValidate.js"></script>
-    <script src="/javascript/ojects/main.js"></script>
+    <script src="/javascript/Ajax.js"></script>
+    <script src="/javascript/objects/LeafletMap.js"></script>
+    <script src="/javascript/objects/PellMell.js"></script>
+    <script src="/javascript/objects/FormValidate.js"></script>
+    <script src="/javascript/objects/main.js"></script>
     <script src="/javascript/scripts.js"></script>
 
-    <!--<script src="/Vendor/dist/polyfill.bundle.js"></script>
-        <script src="/Vendor/dist/app.bundle.js"></script>-->
+    <script src="/Vendor/dist/polyfill.bundle.js"></script>
+    <script src="/Vendor/dist/app.bundle.js"></script>
 </body>
 
 </html>

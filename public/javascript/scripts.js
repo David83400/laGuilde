@@ -2,30 +2,38 @@ window.addEventListener('load', () => {
     leafletMap.loadMap();
 });
 
-/*document.querySelector(".listMap").addEventListener("load", () => {
-    leafletMap.itemHoverEvent();
-});*/
 
-document.getElementById('pseudo').addEventListener('input', () => {
-    inscriptionForm.pseudoVerif();
-});
+/* ------------------------------------ Connection form animations ---------------------------------------- */
+if (document.getElementById('connectionForm')) {
+    document.getElementById('connectionForm').addEventListener('input', () => {
+        connectionForm.formValidate();
+    });
+}
 
-document.getElementById('email').addEventListener('input', () => {
-    inscriptionForm.emailVerif();
-});
+/* ------------------------------------ Contact form animations ---------------------------------------- */
+if (document.getElementById('contactForm')) {
+    document.getElementById('contactForm').addEventListener('input', () => {
+        contactForm.formValidate();
+    });
+}
 
-document.getElementById('emailConfirm').addEventListener('input', () => {
-    inscriptionForm.emailConfirmVerif();
-});
+/* ------------------------------------ Register form animations ---------------------------------------- */
+if (document.getElementById('registerForm')) {
+    document.getElementById('registerForm').addEventListener('input', () => {
+        registerForm.formValidate();
+    });
+}
 
-document.getElementById('password').addEventListener('input', () => {
-    inscriptionForm.passwordVerif();
-});
+/* ------------------------------------ Assistance form animations ---------------------------------------- */
+if (document.getElementById('assistanceForm')) {
+    document.getElementById('assistanceForm').addEventListener('input', () => {
+        assistanceForm.formValidate();
+    });
+}
 
-document.getElementById('passwordConfirm').addEventListener('input', () => {
-    inscriptionForm.passwordConfirmVerif();
-});
-
-document.getElementById('form').addEventListener('input', () => {
-    inscriptionForm.verifForm();
-});
+/* ------------------------------------ ChangeMdp form animations ---------------------------------------- */
+if (document.getElementById('changeMdpForm')) {
+    document.getElementById('changeMdpForm').addEventListener('input', () => {
+        changeMdpForm.formValidate();
+    });
+}

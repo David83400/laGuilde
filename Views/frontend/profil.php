@@ -1,4 +1,4 @@
-<?php $this->title = 'La Guilde'; ?>
+<?php $this->title = 'La Guilde | ' . $member->getPseudo(); ?>
 
 <section id="memberInfos" class="my-5">
     <div class="container">
@@ -9,7 +9,7 @@
                     <h3 class="darkBrownCol dancingFont my-2">Vous trouverez ici vos informations de connexion</h3>
                     <p class="mt-3 mb-2"><span>Votre pseudo : </span><?= $member->getPseudo() ?></p>
                     <p class="my-2"><span>Votre email : </span><?= $memberEmail->getEmail() ?></p>
-                    <p class="my-2"><span>Vous êtes inscrit depuis le </span><?= $member->getInscription_date() ?></p>
+                    <p class="my-2"><span>Vous êtes inscrit depuis le </span><?= date_format($member->getInscription_date(), 'd/m/Y à H:i:s') ?></p>
                 </div>
             </div>
         </div>

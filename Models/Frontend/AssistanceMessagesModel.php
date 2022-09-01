@@ -103,7 +103,7 @@ class AssistanceMessagesModel extends Manager
      */
     public function getMessage_date()
     {
-        return $this->message_date;
+        return date_create($this->message_date, timezone_open("Europe/Paris"));
     }
 
     /**
@@ -115,7 +115,7 @@ class AssistanceMessagesModel extends Manager
     {
         $message_date = date_create($message_date, timezone_open("Europe/Paris"));
 
-        $this->message_date = date_format($message_date, 'd/m/y H:i:s');
+        $this->message_date = date_format($message_date, 'Y-d-m H:i:s');
 
         return $this;
     }

@@ -3,7 +3,7 @@
 <section id="appliSection" class="py-5">
     <div class="container-fluid">
         <div class="listMap">
-            <div class="item js-marker" data-lat="43.191199" data-lng="6.041984" data-img="/public/images/home/cards/card1.jpg">
+            <div class="item js-marker" data-lat="43.191199" data-lng="6.041984" data-img="/images/home/cards/card1.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card1.jpg" alt="" class="w-100">
                 </div>
@@ -16,7 +16,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.329229" data-lng="6.045799" data-img="/public/images/home/cards/card2.jpg">
+            <div class="item js-marker" data-lat="43.329229" data-lng="6.045799" data-img="/images/home/cards/card2.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card2.jpg" alt="" class="w-100">
                 </div>
@@ -29,7 +29,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.237875" data-lng="6.072200" data-img="/public/images/home/cards/card3.jpg">
+            <div class="item js-marker" data-lat="43.237875" data-lng="6.072200" data-img="/images/home/cards/card3.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card3.jpg" alt="" class="w-100">
                 </div>
@@ -42,7 +42,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.406550" data-lng="6.061187" data-img="/public/images/home/cards/card4.jpg">
+            <div class="item js-marker" data-lat="43.406550" data-lng="6.061187" data-img="/images/home/cards/card4.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card4.jpg" alt="" class="w-100">
                 </div>
@@ -55,7 +55,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.726075" data-lng="5.812820" data-img="/public/images/home/cards/card5.jpg">
+            <div class="item js-marker" data-lat="43.726075" data-lng="5.812820" data-img="/images/home/cards/card5.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card5.jpg" alt="" class="w-100">
                 </div>
@@ -68,7 +68,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.593539" data-lng="6.016305" data-img="/public/images/home/cards/card6.jpg">
+            <div class="item js-marker" data-lat="43.593539" data-lng="6.016305" data-img="/images/home/cards/card6.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card6.jpg" alt="" class="w-100">
                 </div>
@@ -81,7 +81,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.700001" data-lng="6.03333" data-img="/public/images/home/cards/card6.jpg">
+            <div class="item js-marker" data-lat="43.700001" data-lng="6.03333" data-img="/images/home/cards/card6.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card6.jpg" alt="" class="w-100">
                 </div>
@@ -94,7 +94,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.191199" data-lng="6.071984" data-img="/public/images/home/cards/card1.jpg">
+            <div class="item js-marker" data-lat="43.191199" data-lng="6.071984" data-img="/images/home/cards/card1.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card1.jpg" alt="" class="w-100">
                 </div>
@@ -107,7 +107,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.329229" data-lng="6.145799" data-img="/public/images/home/cards/card2.jpg">
+            <div class="item js-marker" data-lat="43.329229" data-lng="6.145799" data-img="/images/home/cards/card2.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card2.jpg" alt="" class="w-100">
                 </div>
@@ -120,7 +120,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.237875" data-lng="6.272200" data-img="/public/images/home/cards/card3.jpg">
+            <div class="item js-marker" data-lat="43.237875" data-lng="6.272200" data-img="/images/home/cards/card3.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card3.jpg" alt="" class="w-100">
                 </div>
@@ -133,7 +133,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.406550" data-lng="6.361187" data-img="/public/images/home/cards/card4.jpg">
+            <div class="item js-marker" data-lat="43.406550" data-lng="6.361187" data-img="/images/home/cards/card4.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card4.jpg" alt="" class="w-100">
                 </div>
@@ -146,7 +146,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.726075" data-lng="6.812820" data-img="/public/images/home/cards/card5.jpg">
+            <div class="item js-marker" data-lat="43.726075" data-lng="6.812820" data-img="/images/home/cards/card5.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card5.jpg" alt="" class="w-100">
                 </div>
@@ -159,7 +159,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.593539" data-lng="6.716305" data-img="/public/images/home/cards/card6.jpg">
+            <div class="item js-marker" data-lat="43.593539" data-lng="6.716305" data-img="/images/home/cards/card6.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card6.jpg" alt="" class="w-100">
                 </div>
@@ -172,7 +172,7 @@
                             suite</a></p>
                 </div>
             </div>
-            <div class="item js-marker" data-lat="43.700001" data-lng="6.63333" data-img="/public/images/home/cards/card6.jpg">
+            <div class="item js-marker" data-lat="43.700001" data-lng="6.63333" data-img="/images/home/cards/card6.jpg">
                 <div class="image">
                     <img src="/images/home/cards/card6.jpg" alt="" class="w-100">
                 </div>

@@ -225,6 +225,13 @@ label,
     font-weight: 700;
 }
 
+#contactSection form input,
+#assistanceSection form input {
+    height: 34px;
+}
+
+
+
 #contactSection form textarea,
 #assistanceSection form textarea {
     height: 180px;

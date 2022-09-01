@@ -1,3 +1,5 @@
+<?php $this->title = 'La Guilde | '; ?>
+
 <section id="assistanceSection" class="mt-1 mb-5">
     <div class="container">
         <div class="row">
